@@ -408,7 +408,7 @@ public static Scanner sc= new Scanner(System.in);
 		 }
 
 		 
-	/****************program to check whether given points are colinear or not using slope********/
+	/****************program to check whether given points are colinear or not */
 
 		 public static  boolean checkSlope(int x1, int x2, int x3, int y1, int y2, int y3) {
 				int slopAB = 0;
@@ -434,24 +434,6 @@ public static Scanner sc= new Scanner(System.in);
 
 					return false;
 		 	}
-		 
-		 
-		 /**************program to check whether given points are collinear or not using area***********/
 
-		 public static  boolean checkCollinearUsingArea(int x1, int x2, int x3, int y1, int y2, int y3)
-		 {
-				int a = (x1 - x2);
-				int b = (x2 - x3);
-				int c = (y1 - y2);
-				int d = (y2 - y3);
-				
-				int value = (a*d) - (b*c);
-				int triangle = (1/2)*value;
-				
-				if(triangle == 0)
-					return true;
-				else 
-					return false;
-			}
 }
 
