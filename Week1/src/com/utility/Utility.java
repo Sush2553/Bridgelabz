@@ -626,7 +626,7 @@ public static void tempConversion()
 	
 	/**********k pattern**********/
 	public static void pattern()
-	{//logic for half K(upto 4 rows)
+	{//logic for half K(upto 4 rows)              
 		for(int i=9;i>=1;i=i-2)
 		{
 			
