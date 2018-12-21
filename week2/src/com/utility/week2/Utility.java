@@ -278,8 +278,134 @@ public static Scanner sc= new Scanner(System.in);
 				String result=padding+reverse;
 				return result;
 		 }
+		 
+		
+		 /**************factorial******/
+		 public static int printFactorial()
+		 {
+			 int fact=1;
+			 System.out.println("enter number:");
+			 int n=sc.nextInt();
+			 System.out.println("factorial of "+n+" :");
+			 for(int i=1;i<=n;i++)
+			 {
+				 fact=fact*i;
+			 }
+			 return fact;
+		 }
+
+/************maxvalue*************/
+		 public static int findLargestFromArray()
+			{
+				System.out.println("enter no. of elements");
+				int n=sc.nextInt();
+				int a[]= new int[n];
+				System.out.println("enter array element");
+				
+				for(int k=0;k<a.length;k++)
+				{
+					a[k]=sc.nextInt();
+				}
+				
+				int temp=a[0];
+				
+				for(int i = 1; i < a.length ; i++) 
+				{
+					if(a[i]>temp) 
+						{
+							
+							temp= a[i];
+							
+						}
+					
+				}
+				
+				
+				return temp;
+			}	
 
 
-	}
+			
+		 /*************minValue***********/
+			
+		 public static int findSmallestFromArray()
+			{
+				System.out.println("enter no. of elements");
+				int n=sc.nextInt();
+				int a[]= new int[n];
+				System.out.println("enter array element");
+				
+				for(int k=0;k<a.length;k++)
+				{
+					a[k]=sc.nextInt();
+				}
+				
+				int temp=a[0];
+				for(int i = 1; i < a.length ; i++) 
+				{
+					if(a[i]<temp) 
+						{
+							
+							temp= a[i];
+							
+						}
+					
+				}
+				
+				
+				return temp;
+			}
+		 
+		 
+		/**********program to calculate future value on invest*******/
+		 
+		 public static double getFutureValueOnInvestment()
+		 {
+			System.out.println("Enter dollars to be invested:");
+			float c= Utility.getFloat();
+			System.out.println("Enter interest rate:");
+			float r= Utility.getFloat();
+			System.out.println("Enter time:");
+			float t= Utility.getFloat();
+			double value = 0;
+				if(c<=0)
+				{
+					System.out.println("investment is zero");
+					getFutureValueOnInvestment();
+				}
+				if(r<0 || t<0) 
+					getFutureValueOnInvestment();
+				else 
+					{
+					value = c*Math.pow((1+r), t);
+					return value;
+					}
+				return value;
+		 }
+		 
+		 
+		 /*************present value***************/
+		 
+		 public static double getCurrentValueToBeInvestment()
+		 {
+			System.out.println("Enter how much future value you want:");
+			float C= Utility.getFloat();
+			System.out.println("Enter interest rate:");
+			float r= Utility.getFloat();
+			System.out.println("Enter time:");
+			float t= Utility.getFloat();
+			double value = 0;
+		 if(C<0 || r<0 || t<0)
+		 	{
+				System.out.println("please enter positive value: ");
+				getCurrentValueToBeInvestment();
+			}
+		 else 
+			{
+			 value = (C/Math.pow((1+r), t));
+			}
+		 return value;
+		 }
 
+}
 
