@@ -423,9 +423,8 @@ public static Scanner sc= new Scanner(System.in);
 				} 
 				catch (Exception e) 
 				{
-					
+					System.out.println("divided by zero exception");
 				}
-				
 				if(slopAB == slopBC && slopBC  == slopAC) 
 				
 					return true;

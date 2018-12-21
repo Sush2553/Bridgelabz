@@ -414,18 +414,10 @@ public static Scanner sc= new Scanner(System.in);
 				int slopAB = 0;
 				int slopBC = 0;
 				int slopAC = 0;
-				try
-				{
 					 slopAB = (y2 - y1)/(x2 - x1);
 					 slopBC = (y3 - y2)/(x3 - x2);
 					 slopAC = (y1 - y3)/(x1 - x3);
-
-				} 
-				catch (Exception e) 
-				{
-					
-				}
-				
+			
 				if(slopAB == slopBC && slopBC  == slopAC) 
 				
 					return true;

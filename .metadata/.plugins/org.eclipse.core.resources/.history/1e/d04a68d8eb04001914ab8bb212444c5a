@@ -407,33 +407,5 @@ public static Scanner sc= new Scanner(System.in);
 		 return value;
 		 }
 
-		 
-	/****************program to check whether given points are colinear or not */
-
-		 public static  boolean checkSlope(int x1, int x2, int x3, int y1, int y2, int y3) {
-				int slopAB = 0;
-				int slopBC = 0;
-				int slopAC = 0;
-				try
-				{
-					 slopAB = (y2 - y1)/(x2 - x1);
-					 slopBC = (y3 - y2)/(x3 - x2);
-					 slopAC = (y1 - y3)/(x1 - x3);
-
-				} 
-				catch (Exception e) 
-				{
-					
-				}
-				
-				if(slopAB == slopBC && slopBC  == slopAC) 
-				
-					return true;
-					
-					else 
-
-					return false;
-		 	}
-
 }
 

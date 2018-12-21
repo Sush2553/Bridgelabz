@@ -422,9 +422,6 @@ public static Scanner sc= new Scanner(System.in);
 
 				} 
 				catch (Exception e) 
-				{
-					
-				}
 				
 				if(slopAB == slopBC && slopBC  == slopAC) 
 				
