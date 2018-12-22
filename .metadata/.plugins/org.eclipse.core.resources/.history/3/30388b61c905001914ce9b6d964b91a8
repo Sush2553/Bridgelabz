@@ -1,0 +1,14 @@
+package com.bridgelabz.functional;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MyFirstClassTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

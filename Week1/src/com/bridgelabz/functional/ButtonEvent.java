@@ -32,7 +32,7 @@ public class ButtonEvent {
 				Time = System.currentTimeMillis();
 		        long interval = Time - firstClick;
 		        
-		        if (interval < 500) 
+		        if (interval < 500)  //500 miliseconds=0.5 seconds
 		        {
 		            System.out.println("Hello Sushant.........." );
 		            firstClick = 0;

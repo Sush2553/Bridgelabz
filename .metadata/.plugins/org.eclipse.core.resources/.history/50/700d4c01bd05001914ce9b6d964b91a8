@@ -1,0 +1,22 @@
+package com.utility;
+
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Scanner;
+
+import org.junit.jupiter.api.Test;
+
+class UtilityTest {
+	public static void isLeapYear()
+	 {
+		assertEquals("not leap",1993);
+	 }
+
+
+	@Test
+	void testIsLeapYear() {
+		isLeapYear();
+	}
+
+}
