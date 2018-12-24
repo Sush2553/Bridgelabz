@@ -281,11 +281,9 @@ public static Scanner sc= new Scanner(System.in);
 		 
 		
 		 /**************factorial******/
-		 public static int printFactorial()
+		 public static int printFactorial(int n)
 		 {
 			 int fact=1;
-			 System.out.println("enter number:");
-			 int n=sc.nextInt();
 			 System.out.println("factorial of "+n+" :");
 			 for(int i=1;i<=n;i++)
 			 {
@@ -363,9 +361,9 @@ public static Scanner sc= new Scanner(System.in);
 		 {
 			System.out.println("Enter dollars to be invested:");
 			float c= Utility.getFloat();
-			System.out.println("Enter interest rate:");
+			System.out.println("Enter interest rate(%):");
 			float r= Utility.getFloat();
-			System.out.println("Enter time:");
+			System.out.println("Enter time in years:");
 			float t= Utility.getFloat();
 			double value = 0;
 				if(c<=0)
@@ -390,9 +388,9 @@ public static Scanner sc= new Scanner(System.in);
 		 {
 			System.out.println("Enter how much future value you want:");
 			float C= Utility.getFloat();
-			System.out.println("Enter interest rate:");
+			System.out.println("Enter interest rate(%):");
 			float r= Utility.getFloat();
-			System.out.println("Enter time:");
+			System.out.println("Enter time in years:");
 			float t= Utility.getFloat();
 			double value = 0;
 		 if(C<0 || r<0 || t<0)
@@ -454,7 +452,46 @@ public static Scanner sc= new Scanner(System.in);
 					return false;
 			}
 
-		
+		/***********square root***/
 		 
+		 public static void findSqrtOfNumber(double c)
+			{
+				double e = 1e-15;
+				double t = c;
+				if(c<0)
+				{
+				findSqrtOfNumber(c);	
+				}
+				else 
+				{
+					while (Math.abs(t - c/t) > e*t) 
+					{
+						t = (c/t + t) / 2;
+					}
+					System.out.println("sqrt="+Math.sqrt(t));
+				}
+			}
+			
+/************square root overloaded method************/
+		 public static void findSqrtOfNumber(double c,double ep)
+			{	double e = ep;
+				double t = c;
+				if(c<0)
+				{
+				findSqrtOfNumber(c,ep);	
+				}
+				else 
+				{
+					while (Math.abs(t - c/t) > e*t) 
+					{
+						t = (c/t + t) / 2;
+					}
+					
+					
+					System.out.println(Math.sqrt(t));
+					
+				}
+			}
+
 }
 

@@ -1,0 +1,15 @@
+package com.bridgelabz.functional;
+
+import static org.junit.Assert.*;
+
+public class Test {
+
+	@org.junit.Test
+	public void test() {
+		EvenOdd t=new EvenOdd();
+		//int result=t.checkEven(2);
+		assertEquals(1,t.checkEven(2));
+		//assertTrue((t.checkEven(5)==0));
+	}
+
+}

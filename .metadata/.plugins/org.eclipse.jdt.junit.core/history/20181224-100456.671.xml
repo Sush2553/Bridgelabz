@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test" project="Week1" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.bridgelabz.functional.Test" time="0.001" uniqueid="[engine:junit-vintage]/[runner:com.bridgelabz.functional.Test]">
+    <testcase name="test" classname="com.bridgelabz.functional.Test" time="0.001" displayname="test" uniqueid="[engine:junit-vintage]/[runner:com.bridgelabz.functional.Test]/[test:test(com.bridgelabz.functional.Test)]"/>
+  </testsuite>
+</testrun>

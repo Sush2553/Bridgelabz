@@ -2,4 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.utility.week2.Utility"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.classfile.Node"/>
+    <fullyQualifiedTypeName name="com.utility.Utility"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

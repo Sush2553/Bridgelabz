@@ -6,7 +6,7 @@ public class MathFunctions {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(" 1. Harmonic series\n 2. Sine of angle\n 3. Cosine of angle\n 4. Decimal to binary conversion \n 5. factorial \n 6. find maximum from array\n 7. find minimum from array \n enter your choice:");
+		System.out.println(" 1. Harmonic series\n 2. Sine of angle\n 3. Cosine of angle\n 4. Decimal to binary conversion \n 5. factorial \n 6. find maximum from array\n 7. find minimum from array \n 8. Square root and error tolerance epsilon \n enter your choice:");
 		int ch=Utility.sc.nextInt();
 		
 		switch(ch)
@@ -30,7 +30,7 @@ public class MathFunctions {
 				break;
 			
 		case 5:
-				int b=Utility.printFactorial();
+				int b=Utility.printFactorial(5);
 				System.out.println(b);
 				break;
 				
@@ -40,9 +40,17 @@ public class MathFunctions {
 				break;
 				
 		case 7:
-			int e=Utility.findSmallestFromArray();
-			System.out.println(e);
-			break;
+				int e=Utility.findSmallestFromArray();
+				System.out.println(e);
+				break;
+		
+		case 8:
+				Utility.findSqrtOfNumber(25.0);
+				Utility.findSqrtOfNumber(25.0,1e-15);
+				break;
+				
+		default:
+				System.out.println("invalid choice");
 	}
 	}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 }

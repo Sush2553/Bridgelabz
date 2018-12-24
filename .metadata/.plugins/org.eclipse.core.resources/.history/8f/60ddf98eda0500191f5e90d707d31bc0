@@ -1,0 +1,18 @@
+package com.bridgelabz.functional;
+
+import java.util.Scanner;
+
+public class EvenOdd {
+
+	public  int checkEven(int n)
+	{
+		/*System.out.println("enter no");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		sc.close();*/
+		if(n%2==0)
+			return 1;
+		else
+			return 0;
+	}
+}
