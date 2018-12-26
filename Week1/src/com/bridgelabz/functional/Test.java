@@ -3,7 +3,7 @@ package com.bridgelabz.functional;
 import static org.junit.Assert.*;
 
 import org.junit.Assert;
-import org.junit.runner.JUnitCore;
+
 
 
 public class Test {

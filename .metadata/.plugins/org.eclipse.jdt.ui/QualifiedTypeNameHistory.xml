@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.utility.week2.Utility"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.classfile.Node"/>
     <fullyQualifiedTypeName name="com.utility.Utility"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+    <fullyQualifiedTypeName name="java.io.UnsupportedEncodingException"/>
+    <fullyQualifiedTypeName name="org.junit.Assert"/>
+    <fullyQualifiedTypeName name="com.sun.net.httpserver.Authenticator.Result"/>
+    <fullyQualifiedTypeName name="org.junit.runner.JUnitCore"/>
+    <fullyQualifiedTypeName name="com.sun.net.httpserver.Authenticator.Failure"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="com.utility.week2.Utility"/>
+    <fullyQualifiedTypeName name="com.bridgelabz.lib.BLStdOut"/>
 </qualifiedTypeNameHistroy>
