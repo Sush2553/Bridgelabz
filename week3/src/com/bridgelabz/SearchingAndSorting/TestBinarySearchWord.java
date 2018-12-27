@@ -11,7 +11,7 @@ import com.utility.week3.Utility;
 public class TestBinarySearchWord {
 
 	@Test
-	public void test() throws IOException {
+	public void testBinaryWord() throws IOException {
 				String res;
 				assertEquals(res=Utility.binarySearchWord("banana"),"found at:1");
 				System.out.println(res);
@@ -19,6 +19,9 @@ public class TestBinarySearchWord {
 				assertEquals(res=Utility.binarySearchWord("cat"),"found at:2");
 				System.out.println(res);
 			
+
+				assertEquals(res=Utility.binarySearchWord("fog"),"not found");
+				System.out.println(res);
 	}
 
 }

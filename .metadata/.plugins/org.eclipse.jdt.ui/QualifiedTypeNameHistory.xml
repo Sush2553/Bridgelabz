@@ -15,4 +15,7 @@
     <fullyQualifiedTypeName name="java.util.Locale"/>
     <fullyQualifiedTypeName name="com.utility.week2.Utility"/>
     <fullyQualifiedTypeName name="com.bridgelabz.lib.BLStdOut"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="com.utility.week3.Utility"/>
 </qualifiedTypeNameHistroy>
