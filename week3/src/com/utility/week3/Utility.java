@@ -296,17 +296,13 @@ public static Scanner sc= new Scanner(System.in);
          		if(s[i].equals(s[j]))
          		{
          			count ++;
-         			s[j] = "0";
+         			i++;
          		}
-         }
-         	if(s[i] != "0")
-         	{
-         		System.out.println("Frequency of '" + s[i]+"':"+count );
          	}
+         System.out.println("Frequency of '" + s[i]+"':"+count );
          count = 1;
- }
+         }
 		return count;
-
 	}		
 	
 /********regular expression demonstration for replacing user name with full name********/
@@ -519,16 +515,17 @@ public static Scanner sc= new Scanner(System.in);
    		System.out.println("Enter password of user:");
    		password=sc.next();
    		String regex ="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
-        
+   		{
 		if(password.matches(regex) == true) 
 		{
        		return password;
        	}
        	else
        	{
-       		System.out.println("invalid password");
+       		System.out.println("invalid");
        		checkPassword();
        	}
+   		}
        	return "invalid";
    	}
 	
