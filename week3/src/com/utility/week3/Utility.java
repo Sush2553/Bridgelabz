@@ -4,7 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Utility {
 	
@@ -166,6 +170,7 @@ public static Scanner sc= new Scanner(System.in);
 			break;
 			}
 			
+			//checks boundry values
 			if(a[mid]==a[0] || a[mid]==4096)
 			{
 				System.out.println("not found");
@@ -173,6 +178,7 @@ public static Scanner sc= new Scanner(System.in);
 			}
 			System.out.println("is your number greater than: "+a[mid]);
 			ch1=sc.next();
+			
 			if(ch1.equals("no")) 
 		
 				high = mid ;
@@ -188,18 +194,8 @@ public static Scanner sc= new Scanner(System.in);
 	
 	/*****************insertion sort using string**************/
 	
-	public static void insertionSort()
+	public static String[] insertionSort(String array[])
 	{
-		int max;
-		System.out.println("please enter no. of elements:");
-		max=sc.nextInt();
-		String array[]=new String[max];
-	
-		System.out.println("enter array elements:");
-		for(int i=0;i<array.length;i++)
-		{
-			array[i]=sc.next();
-		}
 		
 		System.out.println("original array:");
 		for(int i=0;i<array.length;i++)
@@ -233,8 +229,9 @@ public static Scanner sc= new Scanner(System.in);
 			break;
 		System.out.print(",");
 		}
-		
+		return array;
 	}
+	
 	
 	/*************Bubble sort***********/
 	public static int[]  bubbleSort( int[] array) {
@@ -312,7 +309,230 @@ public static Scanner sc= new Scanner(System.in);
 
 	}		
 	
+/********regular expression demonstration for replacing user name with full name********/
+	
+	public static void regexExpression(String fullName, String mobile , String firstName) 
+	{
+		
+		String Message = "Hello <<name>>, We have your full name " +
+		           
+	                "as <<full name>> in our system. \nYour contact number is +91­xxxxxxxxxx. \nPlease,let us " +
+	                "know in case of any clarification.\n\t\t\t Thank you!!!\n\t\t\t BridgeLabz 01/01/2016. " ;
+	       
+	        String regexName = "<<name>>" ;
+	       
+	        String regexFname = "<<full name>>" ;
+	        
+	        String regexNum = "­xxxxxxxxxx";
+	       
+	        String regexDate = "01/01/2016";
+	       
+	        SimpleDateFormat Date = new SimpleDateFormat("dd/MM/yyyy");
+
+	        Date date = new Date();
+	       
+	        String fdate = Date.format(date);
+	       
+	        //System.out.println("Date: " +fdate);
+	        Message = details(Message, regexName, firstName);
+	        Message = details(Message, regexFname,fullName );
+	        Message = details(Message, regexNum, mobile);
+	        Message = details(Message, regexDate, fdate);
+	       
+
+	        System.out.println(Message);
+	}
+	
+    public static String details(String Template , String regexName , String regexFname){
+	       
+        //pattern object which defines the regular expression
+       
+        Pattern pattern = Pattern.compile(regexName);
+       
+        //matcher object
+        Matcher match = pattern.matcher(Template);
+        return match.replaceAll(regexFname);
+
+    }
+    
+    /***********program to print lyrics of poem**********/
+    
+    public static void printLyrics()
+    {
+    	String poem="Old MacDonald had a farm, E-I-E-I-O\n" + 
+    			"And on his farm he had a <<ANIMAL>>, E-I-E-I-O\n" + 
+    			"With a <<SOUND>> here and a <<SOUND>> there\n" + 
+    			"Here a <<SOUND>>\n" + 
+    			"There a <<SOUND>>\n" + 
+    			"Everywhere <<SOUND>>\n" + 
+    			"Old MacDonald had a farm, E-I-E-I-O";
+    	
+    	
+    	for(int i=1;i<=9;i++)
+    	{
+    		if(i==1)
+    		{
+    			String fin=poem.replaceAll("<<ANIMAL>>","Chicks" ).replaceAll("<<SOUND>>","chick-chick");
+    			System.out.println(fin+"\n");
+    		}
+    		
+    		if(i==2)
+    		{
+    			String fin=poem.replaceAll("<<ANIMAL>>","Duck" ).replaceAll("<<SOUND>>","Quack-quack");
+    			System.out.println(fin+"\n");
+    		}
+    		
+    		if(i==3)
+    		{
+    			String fin=poem.replaceAll("<<ANIMAL>>","Turkey" ).replaceAll("<<SOUND>>","gobble-gobble");
+    			System.out.println(fin+"\n");
+    		}
+    		if(i==4)
+    		{
+    			String fin=poem.replaceAll("<<ANIMAL>>","Cow" ).replaceAll("<<SOUND>>","moo-moo");
+    			System.out.println(fin+"\n");
+    		}
+    		if(i==5)
+    		{
+    			String fin=poem.replaceAll("<<ANIMAL>>","Pig" ).replaceAll("<<SOUND>>","oink-oink");
+    			System.out.println(fin+"\n");
+    		}
+    		if(i==6)
+    		{
+    			String fin=poem.replaceAll("<<ANIMAL>>","Cat" ).replaceAll("<<SOUND>>","meow-meow");
+    			System.out.println(fin+"\n");
+    		}
+    		if(i==7)
+    		{
+    			String fin=poem.replaceAll("<<ANIMAL>>","Dog" ).replaceAll("<<SOUND>>","Bow-Bow");
+    			System.out.println(fin+"\n");
+    		}
+    		if(i==8)
+    		{
+    			String fin=poem.replaceAll("<<ANIMAL>>","Mule" ).replaceAll("<<SOUND>>","Heehaw-Heehaw");
+    			System.out.println(fin+"\n");
+    		}
+    		if(i==9)
+    		{
+    			String fin=poem.replaceAll("<<ANIMAL>>","Turtle" ).replaceAll("<<SOUND>>","nerp-nerp");
+    			System.out.println(fin);
+    		}
+    		
+    	}
+    }
+
+/**************program to validate user deatails************/
+    public static String checkFname()
+	{
+    	String firstName;
+		System.out.println("Enter first name:");
+		firstName=sc.next();
+		String regex ="[a-zA-z]+";
+    	if(firstName.matches(regex) == true)
+    	{
+    		return firstName;
+    	}
+    	else
+    	{
+    		System.out.println("invalid first name");
+    		checkFname();
+    	}
+    	return "invalid";
+	}
+	
+    
+    public static String checkLname()
+   	{
+       	String lastName;
+   		System.out.println("Enter last:");
+   		lastName=sc.next();
+   		String regex ="[a-zA-z]+";
+       	if(lastName.matches(regex) == true)
+       	{
+       		return lastName;
+       	}
+       	else
+       	{
+       		System.out.println("invalid last name");
+       		checkLname();
+       	}
+       	return "invalid";
+   	}
+		
+	
+    public static String checkPhoneNumber()
+   	{
+       	String phoneNumber;
+   		System.out.println("Enter mobile number:");
+   		phoneNumber=sc.next();
+   		String regex ="[0-9]{10}$";
+       	if(phoneNumber.matches(regex) == true)
+       	{
+       		return phoneNumber;
+       	}
+       	else
+       	{
+       		System.out.println("invalid number");
+       		checkPhoneNumber();
+       	}
+       	return "invalid";
+   	}
 	
 
+    public static String checkEmail(String email)
+   	{
+    	
+      String regex ="^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
+       	if(email.matches(regex) == true)
+       	{
+       		return email;
+       	}
+       	else
+       	{
+       		System.out.println("invalid email");
+       		
+       	}
+       	return "invalid";
+   	}
+	
+    public static String checkUserId()
+   	{
+       	String id;
+   		System.out.println("Enter user id:");
+   		id=sc.next();
+   		String regex ="[0-9a-zA-Z]+";
+       	if(id.matches(regex) == true)
+       	{
+       		return id;
+       	}
+       	else
+       	{
+       		System.out.println("invalid user id");
+       		checkUserId();
+       	}
+       	return "invalid";
+   	}
+	
+    public static String checkPassword()
+   	{
+       	String password;
+   		System.out.println("Enter password of user:");
+   		password=sc.next();
+   		String regex ="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
+        
+		if(password.matches(regex) == true) 
+		{
+       		return password;
+       	}
+       	else
+       	{
+       		System.out.println("invalid password");
+       		checkPassword();
+       	}
+       	return "invalid";
+   	}
+	
+ 
+	
 
 }
