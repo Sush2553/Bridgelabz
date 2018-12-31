@@ -69,6 +69,12 @@ public static Scanner sc= new Scanner(System.in);
 		String string = sc.nextLine();
 		return string;
 	}
+	
+	public static boolean getBoolean() {
+		boolean booleanValue = sc.nextBoolean();
+		return booleanValue;
+	}
+
 
 	/*****************Binary search the world from list**************/
 	
@@ -329,7 +335,7 @@ public static Scanner sc= new Scanner(System.in);
 	       
 	        String fdate = Date.format(date);
 	       
-	        //System.out.println("Date: " +fdate);
+	        
 	        Message = details(Message, regexName, firstName);
 	        Message = details(Message, regexFname,fullName );
 	        Message = details(Message, regexNum, mobile);
@@ -341,8 +347,6 @@ public static Scanner sc= new Scanner(System.in);
 	
     public static String details(String Template , String regexName , String regexFname){
 	       
-        //pattern object which defines the regular expression
-       
         Pattern pattern = Pattern.compile(regexName);
        
         //matcher object
@@ -530,6 +534,216 @@ public static Scanner sc= new Scanner(System.in);
    	}
 	
  
-	
+/***************************ARRAYS**************************/
+    /*********** 2D arrays for integers,doubles or booleans***************/
+    
+    public static void print2DArray(int choice) {
 
+    	System.out.println("no of rows ?:");
+    	int row = Utility.getInt();
+    	System.out.println("no of col ?:");
+    	int col = Utility.getInt();
+    	System.out.println("Enter element for row col wise:");
+    	
+
+    	switch(choice)
+    	{
+    	case 1:
+    	Integer[][] intArray=new Integer[row][col];
+    	for(int i=0;i<row;i++)
+    		{
+    		for(int j=0;j<col;j++)
+    		{
+    			intArray[i][j]=Utility.getInt();
+    		}
+    		}
+    	//print2DArrayElement(intArray);
+    		for(int k=1;k<=col;k++)
+    		{
+    		System.out.print("\t"+"col"+k);
+    		}
+    		System.out.println();
+    		
+    		for(int i=0;i<row;i++) 
+    		{
+    			System.out.print("row"+(i+1)+"\t");
+    			for(int j=0;j<col;j++) 
+    			{
+    				System.out.print(" "+intArray[i][j]+"\t");
+    			}
+    			System.out.println();
+    		}
+    		break;
+    	
+    	case 2:
+    	Double[][] doubleArray = new Double [row][col];
+    	for(int i=0;i<row;i++) 
+    	{
+    		for(int j=0;j<col;j++) 
+    		{
+    			doubleArray[i][j] =Utility.getDouble();
+    		}
+    	}
+
+    	//print the double array
+    	for(int k=1;k<=col;k++)
+		{
+		System.out.print("\t"+"col"+k);
+		}
+		System.out.println();
+		
+    	for(int i=0;i<row;i++) 
+    	{
+    		System.out.print("row"+(i+1)+"\t");
+    		for(int j=0;j<col;j++) 
+    		{
+    			System.out.print(doubleArray[i][j]+" ");
+    		}
+    		System.out.println();
+    	}
+    	break;
+    	
+    	case 3:
+    	Boolean [][] booleanArray = new Boolean [row][col];
+    	for(int i=0;i<row;i++) 
+    	{
+    		for(int j=0;j<col;j++) 
+    		{
+    			booleanArray[i][j] =Utility.getBoolean();
+    		}
+    	}
+
+    	//print the double array
+    	for(int k=1;k<=col;k++)
+		{
+		System.out.print("\t"+"col"+k);
+		}
+		System.out.println();
+		
+    	for(int i=0;i<row;i++) 
+    	{
+    		System.out.print("row"+(i+1)+"\t");
+    		for(int j=0;j<col;j++) 
+    		{
+    			System.out.print(booleanArray[i][j]+" ");
+    		}
+    		System.out.println();
+    	}
+    	break;
+
+    	default:System.out.println("Invalid choice");
+
+    	} 
+    }
+    
+    
+    /***************prime numbers between 1-1000**************/
+    
+ 
+    	public static void prime2DArray() 
+    	{
+    		int [][]prime = new int [10][25];
+    		int first=0,second=0,third=0,fourth=0;
+    		int fifth=0,sixth=0,seventh=0,eight=0,nineth=0,ten=0;
+    	
+    		for(int i=2;i<1000;i++) 
+    		{
+    			
+    			int flag=0;
+    			for(int j=2;j<i;j++)
+    			{
+    				if(i%j==0)
+    				flag=1;
+    			}
+    			
+    			if(flag==0) 
+    			{
+    			
+    			if((i > 0) && (i<= 100))
+    			prime[0][first++] = i;
+    	
+    			else if((i > 100) && (i <= 200))
+    				prime[1][second++]=i;
+    			
+    			else if((i > 200) && (i<= 300)) 
+    				prime[2][third++] = i;
+    			
+    			else if((i> 300) && (i <= 400)) 
+    				prime[3][fourth++] =i;
+    			
+    			else if((i > 400) && (i <= 500)) 
+    				prime[4][fifth++] = i;
+    			
+    			else if((i> 500) && (i <= 600)) 
+    				prime[5][sixth++] = i;
+    			
+    			else if((i>600)&&(i<=700)) 
+    				prime[6][seventh++]=i;
+    			
+    			else if((i> 700) && (i <= 800)) 
+    				prime[7][eight++] = i;
+    			
+    			else if((i> 800) && (i <= 900)) 
+    				prime[8][nineth++] = i;
+    			
+    			else if((i> 900) && (i <= 1000)){	
+    				prime[9][ten++] = i;
+    			}
+    		}
+    		}
+    		
+    		//print column names
+    		System.out.print("\t\t\t\t");
+    		for(int x=1;x<=20;x++)
+    		{
+    			System.out.print("col"+x+"\t");
+    		}
+    		System.out.println("\n");
+    		
+    		//print prime numbers
+    		for(int k=0;k<10;k++)
+    		{
+    		System.out.print("range:"+(k*100+1)+"-"+(k*100+100)+"\t");
+    		System.out.print(" row"+(k+1)+"-->\t");
+    			for(int l=0;l<20;l++) 
+    			{
+    			System.out.print(prime[k][l]+"\t");
+    			}
+    			System.out.println();
+    		}
+    	}
+    	
+
+
+/******************triplets sum to zero**********/
+    	
+    	
+    	public static void findTripletSumsToZero() 
+    	{
+    		int a[]= {-6,1,3,3,4,5,-9};
+         	int size = a.length;
+    		int count = 0;
+    		
+    		System.out.println("Triplets are as follows:");
+    		for(int i=0;i<size-2;i++) 
+    		{
+    			for(int j=i+1;j<size-1;j++) 
+    			{
+    				for(int k=j+1;k<size;k++) 
+    				{
+    					
+    					if(a[i]+a[j]+a[k] == 0)
+    					{
+    						System.out.println(a[i]+" "+a[j]+" " +a[k] );
+    						count++;
+    					}
+    						
+    					}
+    				}
+    			}
+    		
+    	
+    	      	System.out.println("number of triplets:"+count++);
+    }
+    	
 }
