@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -1103,5 +1104,167 @@ public static Scanner sc= new Scanner(System.in);
  }
  
  
+ 
+ /***********************gambling simulator****************/
+ 
+	public static void gamblingSimulator()
+	{
+		int stake,goal,trails;
+		System.out.println("enter amount:");
+		stake=sc.nextInt();
+		System.out.println("enter goal:");
+		goal=sc.nextInt();
+		System.out.println("enter number of trails:");
+		trails=sc.nextInt();
+		double array[][]=new double[trails][1];
+		int wins=0;
+		int loss=0;
+		
+			int cash = stake;
+			{
+				if(goal<=cash)
+				System.out.println("goal is less than or equal to cash");
+			
+				else 
+				{
+						for(int m=0;m<trails;m++)
+						{
+							double v=Math.random();
+							if(v< 0.5) 
+							{
+								array[m][0]=v;
+								loss++;	
+								cash=cash-100; //100 win amount
+							}	
+							else 
+							{
+								array[m][0]=v;
+								wins++;
+								cash=cash+100;
+							}
+						}
+			
+			System.out.println("\nresult of every trails is as:");
+				for(int i=0;i<trails;i++)
+				{
+					System.out.print((i+1)+")"+array[i][0]);
+					if(array[i][0]<0.5)
+						System.out.print("-> lost\n");
+					else
+						System.out.print("-> won\n");
+				}
+						
+				
+			if(cash==goal)
+				System.out.println("reached goal...");
+			else
+				System.out.println("can't reach the goal...");
+			double pw= (wins*100)/trails;
+			System.out.println(" win percentage="+pw);
+			double pl= (loss*100)/trails;
+			System.out.println(" loss percentage="+pl);
+			
+			
+			}
+		}
+			
+	}
+	
+	
+	/******************Roll die*************/
+	
+	public static void findRolledNumberFrequencyOnDice()
+	{
+		int count1=0,count2=0,count3=0,count4=0,count5=0,count6=0;
+		System.out.println("enter number of dice rolls:");
+		int n=sc.nextInt();
+		Random dice = new Random();
+		
+		int a[]=new int[n];
+		int res[][]=new int[6][1];
+		System.out.println("Random numbers are as follows:");
+		for(int i = 0 ; i < n ; i++) 
+		{
+			int num=1+dice.nextInt(6);
+			System.out.print(num+" ");
+			for(int k = 0 ; k < n ; k++) 
+				{
+				a[k]=num;
+				}
+			
+			if (num==1) 
+			{
+				
+				count1++;
+				res[0][0]=count1;
+			}
+	
+			if (num==2) 
+			{
+				count2++;
+				res[1][0]=count2;
+			}
+			if (num==3)
+			{
+				count3++;
+				res[2][0]=count3;
+			}
+			if (num==4)
+			{
+				count4++;
+				res[3][0]=count4;
+			}
+			if (num==5)
+			{
+				count5++;
+				res[4][0]=count5;
+			}
+			if (num==6) 
+			{
+				count6++;
+				res[5][0]=count6;
+			}
+		}
+		System.out.print("\n");
+		for(int k=0;k<6;k++)
+		{
+			System.out.println((k+1)+" repeated "+res[k][0]+" times.");
+		}
+	
+		
+	}
+	
+	
+	/********************HARMONIC SERIES*************/
+	public static void findHarmonicSeries()
+	{
+		System.out.println("how many harmonic series you want to print??????");
+		int x=sc.nextInt();
+		double series[][]=new double[x][2];
+		
+		for(int a=1;a<=x;a++)
+		{
+		int n;
+		System.out.println("enter value of n:");
+		n=sc.nextInt();
+	
+		series[a-1][0]=n;
+		double sum=0.0;
+		for(int i=1;i<=n;i++)
+			{
+			sum=sum+1.0/i;
+			}
+		series[a-1][0]=n;
+		series[a-1][1]=sum;
+		//System.out.println(a);
+	
+		}
+		
+		for(int i=1;i<=x;i++)
+		{
+			System.out.println("harmonic series for "+series[i-1][0]+" is "+series[i-1][1]);
+		}
+		
+	}
  
 }
