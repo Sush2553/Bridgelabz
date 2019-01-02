@@ -1266,5 +1266,52 @@ public static Scanner sc= new Scanner(System.in);
 		}
 		
 	}
+	
+	
+	
+	/*******************power of 2************/
+	public static void getPowerOfTwo()
+	{
+		System.out.println("please enter nth value to find power of 2:");
+		int n=sc.nextInt();
+		int unitIndex=0,tenIndex=0,hundredIndex=0;
+		int power[][]=new int[3][5];
+		
+		for(int i=0;i<=n;i++)
+		{
+			int result=(int) Math.pow(2,i);
+			
+			if(result>=0 && result<=9)
+			{
+			power[0][unitIndex]=result;
+			unitIndex++;
+			}
+			
+			else 
+			if(result>=10 && result<=99)
+			{
+			power[1][tenIndex]=result;
+			tenIndex++;
+			}
+			else
+			if(result>=100 && result<=999)
+			{
+			power[2][hundredIndex]=result;
+			hundredIndex++;
+		    }
+		
+		}
+		//print 
+		for(int k=0;k<=2;k++)
+		{
+			for(int l=0;l<4;l++) 
+			{
+				
+			System.out.print(power[k][l]+"\t");
+			}
+			System.out.println();
+		}
+	}
+	
  
 }
