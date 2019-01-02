@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -81,11 +82,14 @@ public static Scanner sc= new Scanner(System.in);
 	public static String binarySearchWord(String search) 
 	{
 		String a,temp = null;
+				
 		
 		try {
 			BufferedReader br=new BufferedReader(new FileReader("/home/admin1/searchWord.txt"));
 			
 			try {
+				while(br.readLine()!="\0")
+				{
 				a=br.readLine();
 				String arr[]=a.split(",");
 				br.close();
@@ -136,8 +140,8 @@ public static Scanner sc= new Scanner(System.in);
 				}
 					
 
-				
-				} 
+				}
+				}
 			catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -746,4 +750,358 @@ public static Scanner sc= new Scanner(System.in);
     	      	System.out.println("number of triplets:"+count++);
     }
     	
+    	
+    	//prime check
+    	public static boolean isPrime(int n) {
+    		
+    		for(int j=2;j<=n/2;j++) {
+    			int rem = n % j;
+    			
+    			if(rem == 0) {
+    				return false;
+    			}
+    			
+    		}
+    		return true;
+
+    }
+
+    	//palindrome check
+    	public static boolean isPallindrome(int number) 
+    	{
+    		int temp=number;
+    		int reverseNumber=0;
+    		while(number>0)
+    		{
+    			int remainder= number%10;
+    			reverseNumber=(reverseNumber*10)+remainder;
+    			number/=10;
+    		}
+    		return (temp==reverseNumber);
+    	}
+
+    	/**********prime anagrams check**********/
+    	public static int[] primeAnagrams(int range) {
+    			int index = 0;
+    			String[] array1 = new String[170];
+    			int[] anagram = new int[170];
+    			int count = 0;
+    			
+    			for(int i=2;i<range;i++)
+    			{
+    				if(Utility.isPrime(i)) 
+    				{
+    					array1[index] = String.valueOf(i);
+    					index++;
+    				}
+    			}
+    			
+    			
+    			
+    			for(int i=0;i<index;i++)
+    			{
+    				for(int j=i+1;j<index;j++)
+    				{
+    					if(Utility.isAnagram(array1[j], array1[i]))
+    					{
+    						anagram[count] = Integer.parseInt(array1[i]);
+    						count++;
+    						anagram[count] = Integer.parseInt(array1[j]);
+    						count++;
+    					}
+    				}
+    			}
+    			
+    			return anagram;
+    		}
+    	
+    	
+    	public static boolean isAnagram(String str1, String str2)
+    	{
+    			boolean status=true;
+    			
+    			if(str1.length() != str2.length())
+    				status = false;
+    			else 
+    			{
+    				char[] str1Array = str1.toCharArray();
+    				char[] str2Array = str2.toCharArray();
+    				
+    				Arrays.sort(str1Array);
+    				Arrays.sort(str2Array);
+    				
+    				status = Arrays.equals(str1Array, str2Array);
+    	 		}
+    			if(status)
+    				return true;
+    			else 
+    				return false;
+    		}
+    		
+    	 	//****************** method for to check prime anagram check *********//
+    	
+    	
+    		public static void primePalindromeCheck(int range) 
+    		{
+    		  for(int index = 2;index<range;index++)
+    		  {
+    			  if(isPrime(index) && isPallindrome(index))
+    			  {
+    				  System.out.println(index+"\t");
+    			  }
+    			  
+    		  }
+    			
+    		}
+    		
+    		
+    		/*********************Program for calendar****************/
+    		
+    		
+    		public static void calender(int month, int year) {
+
+    			String[] months = { "", "January", "February", "March", "April", "May", "June", "July", "August", "September",
+    					"Octomber", "November", "December" };
+    			int[] days = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+    			if (month == 2)
+    			{
+    				if(year%4==0 || year%400==0 && year%100!=0)
+    				days[month] = 29;
+    			}
+    			System.out.println("   " + months[month] + " " + year);
+    			System.out.println("\tSun\tMon\tTue\tWed\tThu\tFri\tSat");
+    			int d = Utility.day(month, 1, year); // d having value between 0 to 6
+    			for (int i = 0; i < d; i++)
+    				System.out.print("\t"); // till day we add space
+    			for (int i = 1; i <= days[month]; i++) {
+    				System.out.printf("\t" + i);
+    				if (((i + d) % 7 == 0)) // next line
+    					System.out.println();
+    			}
+    		}
+    			
+
+    		public static int day(int month, int day, int year) {
+    			int y = year - (14 - month) / 12;
+    			int x = y + y / 4 - y / 100 + y / 400;
+    			int m = month + 12 * ((14 - month) / 12) - 2;
+    			int d = (day + x + (31 * m) / 12) % 7;
+    			return d;
+
+    		}
+    		
+    		
+    	/***********program to find repeated number*********/
+
+    public static int findrepeatedNumber(int[] array) 
+    {
+    	int count = 0;
+    	for(int i=0;i<array.length;i++)
+    	{
+    		for(int j=i+1;j<array.length;j++)
+    		{
+    			if(array[i] == array[j]) 
+    			{
+    				System.out.println("repeated number:"+array[i]);
+    				count++;
+    			}
+    		}
+    	}
+    			return count;
+    }
+    		
+    		
+    /*********transpose of matrix************/
+    public static int[][] matricTraspos(int row,int col){
+    	
+    	int [][]array = new int [row][col];
+    	  System.out.println("Enter element of matrix :");
+    	  
+    	  for(int i=0;i<row;i++) {
+    		  for(int j=0;j<col;j++) {
+    			   array[i][j] = Utility.getInt();
+    		  }
+    	  }
+    	  System.out.println();
+    	  
+    	  System.out.println("original matrix:");
+    	  for(int x=0;x<col;x++)
+    	  {
+    	  System.out.print("\tcol"+(x+1));
+    	  }
+    	  System.out.println();
+    	  
+    	  for(int i=0;i<row;i++)
+    	  {
+    		  System.out.print("row"+(i+1)+" ");
+    		  for(int j=0;j<col;j++) 
+    		  {
+    			  System.out.print("\t "+array[i][j]);
+    			  
+    		  }
+    		  System.out.println();
+    	  }
+    	
+    	 //print final result
+    	  System.out.println("\nafter transpose:");
+    	  for(int x=0;x<col;x++)
+    	  {
+    	  System.out.print("\tcol"+(x+1));
+    	  }
+    	  System.out.println();
+    	  
+    	 
+    	
+    	for(int i=0;i<col;i++) 
+    	{
+    		 System.out.print("row"+(i+1)+" ");
+    		for(int j=0;j<row;j++)
+    		{
+    			
+    			System.out.print("\t "+array[j][i]);
+    		}
+    		System.out.println();
+    	
+
+    }
+    	return array ;
+
+    }
+    
+    
+    /***************determinant of matrics***********/
+    
+ public static void calculateMatricDeterminant(int row,int col)
+ {
+    	
+    	int [][]array = new int [row][col];
+    	  System.out.println("Enter element of matrix :");
+    	  
+    	  for(int i=0;i<row;i++) 
+    	  {
+    		  for(int j=0;j<col;j++) 
+    		  {
+    			   array[i][j] = Utility.getInt();
+    		  }
+    	  }
+    	  System.out.println();
+    	  
+    	  System.out.println("your matric:");
+    	  for(int x=0;x<col;x++)
+    	  {
+    	  System.out.print("\tcol"+(x+1));
+    	  }
+    	  System.out.println();
+    	  
+    	  for(int i=0;i<row;i++)
+    	  {
+    		  System.out.print("row"+(i+1)+" ");
+    		  for(int j=0;j<col;j++) 
+    		  {
+    			  System.out.print("\t "+array[i][j]);
+    			  
+    		  }
+    		  System.out.println();
+    	  }
+    	  
+    	  
+    	  int result1=array[0][0]*((array[1][1]*array[2][2])-(array[2][1]*array[1][2]));
+    	  int result2=array[0][1]*((array[1][0]*array[2][2])-(array[2][0]*array[1][2]));
+    	  int result3= array[0][2]*((array[1][0]*array[2][1])-(array[2][0]*array[1][1]));
+	      int finalResult=result1-result2+result3;
+	      System.out.println("Determinant:"+finalResult);
+	     System.out.println(result1+" "+result2+" "+result3);
+ }
+
+
+ /*********matric multiplication***************/
+ 
+ public static void getMatricMultiplication()
+ {
+    	
+    	int [][]array1 = new int [2][3];
+    	  System.out.println("Enter element of matrix 1 :");
+    	  
+    	  for(int i=0;i<2;i++) 
+    	  {
+    		  for(int j=0;j<3;j++) 
+    		  {
+    			   array1[i][j] = Utility.getInt();
+    		  }
+    	  }
+    	  System.out.println();
+    	  
+    	  System.out.println("your matric:");
+    	  for(int x=0;x<3;x++)
+    	  {
+    	  System.out.print("\tcol"+(x+1));
+    	  }
+    	  System.out.println();
+    	  
+    	  for(int i=0;i<2;i++)
+    	  {
+    		  System.out.print("row"+(i+1)+" ");
+    		  for(int j=0;j<3;j++) 
+    		  {
+    			  System.out.print("\t "+array1[i][j]);
+    			  
+    		  }
+    		  System.out.println();
+    	  }
+    	  
+    	  
+
+      	int [][]array2 = new int [3][2];
+      	  System.out.println("\nEnter element of matrix 2 :");
+      	  
+      	  for(int i=0;i<3;i++) 
+      	  {
+      		  for(int j=0;j<2;j++) 
+      		  {
+      			   array2[i][j] = Utility.getInt();
+      		  }
+      	  }
+      	  System.out.println();
+      	  
+      	  System.out.println("your matric:");
+      	  for(int x=0;x<2;x++)
+      	  {
+      	  System.out.print("\tcol"+(x+1));
+      	  }
+      	  System.out.println();
+      	  
+      	  for(int i=0;i<3;i++)
+      	  {
+      		  System.out.print("row"+(i+1)+" ");
+      		  for(int j=0;j<2;j++) 
+      		  {
+      			  System.out.print("\t "+array2[i][j]);
+      			  
+      		  }
+      		  System.out.println();
+      	  }
+ 	
+
+ int res1=(array1[0][0]*array2[0][0])+(array1[0][1]*array2[1][0])+(array1[0][2]*array2[2][0]);
+
+ int res2=(array1[0][0]*array2[0][1])+(array1[0][1]*array2[1][1])+(array1[0][2]*array2[2][1]);
+
+ int res3=(array1[1][0]*array2[0][0])+(array1[1][1]*array2[1][0])+(array1[1][2]*array2[2][0]);
+
+ int res4=(array1[1][0]*array2[0][1])+(array1[1][1]*array2[1][1])+(array1[1][2]*array2[2][1]);
+
+ //int multiplication[][]=new int[2][2];
+ System.out.println("\nmatric multiplication:");
+ for(int x=0;x<2;x++)
+	  {
+	  System.out.print("\tcol"+(x+1));
+	  }
+	  System.out.println();
+ System.out.print("row1\t"+res1+"\t"+res2+"\n");
+ System.out.print("row2\t"+res3+"\t"+res4+"\n");
+ 
+ }
+ 
+ 
+ 
 }
