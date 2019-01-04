@@ -89,8 +89,7 @@ public static Scanner sc= new Scanner(System.in);
 			BufferedReader br=new BufferedReader(new FileReader("/home/admin1/searchWord.txt"));
 			
 			try {
-				while(br.readLine()!="\0")
-				{
+			
 				a=br.readLine();
 				String arr[]=a.split(",");
 				br.close();
@@ -141,7 +140,7 @@ public static Scanner sc= new Scanner(System.in);
 				}
 					
 
-				}
+				
 				}
 			catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -1032,7 +1031,7 @@ public static Scanner sc= new Scanner(System.in);
     	  }
     	  System.out.println();
     	  
-    	  System.out.println("your matric:");
+    	  System.out.println("your matrix:");
     	  for(int x=0;x<3;x++)
     	  {
     	  System.out.print("\tcol"+(x+1));
@@ -1312,6 +1311,97 @@ public static Scanner sc= new Scanner(System.in);
 			System.out.println();
 		}
 	}
+	
+	
+	/*****************birth dates of 50 individuals***************/
+	
+	public static void getBirthDate(int maximum, int minimum)
+	{
+		int st[][]=new int[50][3];
+		
+		for(int i=0;i<50;i++) 
+		{
+		int n= ((int) (Math.random()*(maximum - minimum))) + minimum;
+		st[i][0]=n;
+		}
+		
+		//month
+		int min=1,max=13;
+		for(int j=0;j<50;j++) 
+		{
+		int n= ((int) (Math.random()*(max - min))) + min;
+		st[j][1]=n;
+		}
+		
+		//year
+		int min1=1992,max1=1994;
+		for(int j=0;j<50;j++) 
+		{
+		int n= ((int) (Math.random()*(max1 - min1))) + min1;
+		
+		st[j][2]=n;
+		}
+		
+		//display
+		
+		System.out.print("Date\tMonth\tYear\n");
+		for(int k=0;k<50;k++)
+		{
+			for(int l=0;l<3;l++) 
+			{
+			if(st[k][l]>=28 && st[k][1]==2 )
+				st[k][l]=st[k][l]-2;
+			
+			if(st[k][2]<1992)
+				st[k][2]=1993;
+			System.out.print(st[k][l]+"\t");
+			}
+			System.out.println();
+		}
+		
+		
+		
+	}
+	
+
+/***************determinent of minor mitrices************/
+	public static void calculateMinorMatrixDeterminant(int row,int col)
+	 {
+	    	
+	    	int [][]array = new int [row][col];
+	    	  System.out.println("Enter element of matrix :");
+	    	  
+	    	  for(int i=0;i<row;i++) 
+	    	  {
+	    		  for(int j=0;j<col;j++) 
+	    		  {
+	    			   array[i][j] = Utility.getInt();
+	    		  }
+	    	  }
+	    	  System.out.println();
+	    	  
+	    	  System.out.println("your matric:");
+	    	  for(int x=0;x<col;x++)
+	    	  {
+	    	  System.out.print("\tcol"+(x+1));
+	    	  }
+	    	  System.out.println();
+	    	  
+	    	  for(int i=0;i<row;i++)
+	    	  {
+	    		  System.out.print("row"+(i+1)+" ");
+	    		  for(int j=0;j<col;j++) 
+	    		  {
+	    			  System.out.print("\t "+array[i][j]);
+	    			  
+	    		  }
+	    		  System.out.println();
+	    	  }
+	    	  
+	    	
+	 }
+	
+
 	
  
 }
