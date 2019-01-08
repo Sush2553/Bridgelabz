@@ -80,7 +80,7 @@ public static Scanner sc= new Scanner(System.in);
 
 	/*****************Binary search the world from list**************/
 	
-	public static String binarySearchWord(String search) 
+	public static int binarySearchWord() 
 	{
 		String a,temp = null;
 				
@@ -122,21 +122,30 @@ public static Scanner sc= new Scanner(System.in);
 				}
 				
 				System.out.println();
+				
+			    String input;
+				System.out.println("which word you want to search????");
+				Scanner sc=new Scanner(System.in);
+				input=sc.next();
+				sc.close();
+			
 				int first=0,last=arr.length-1;
 				
 				while(first<=last) 
 				{
 					int mid = (first + last)/2;
-					if(search.compareTo(arr[mid])==0)
+					if(input.compareTo(arr[mid])==0)
 					{
-						return "found at:"+mid;
+						return mid;
 					}
-					else if(search.compareTo(arr[mid]) > 0)
+					else if(input.compareTo(arr[mid]) > 0)
 					{
 						first=mid+1;
 					}
 					else
+					{
 						last=mid-1;
+					}
 				}
 					
 
@@ -154,24 +163,44 @@ public static Scanner sc= new Scanner(System.in);
 			
 	}
 		
-		return "not found";
+		return -1;
 	}
 
 	
 	/***********find magic number************/
 	public static void findNumber() 
 	{
-		int a[]= {2,4,8,16,32,64,128,256,512,1024,2048,4096};
+		System.out.println("enter value of n such that n should be power of 2:");
+		int n=sc.nextInt();
+		
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			
+			a[i]=i;
+			
+		}
+		
+		for(int i=0;i<a.length;i++)
+		{
+			
+			System.out.print(a[i]+" ");
+			
+		}
+		System.out.println();
+		
+		System.out.println("guess any number between 0 to "+(n-1));
 		int low =0;
 		int high =a.length;
-		int mid;
+		int mid,temp = 0;
 		String ch1;
 		
 
 		while(low<=high) 
 		{
 			mid = (low+high)/2;
-			
+			if(temp==mid)
+				System.out.println("not found");
 			System.out.println("is your number: "+a[mid]);
 			ch1=sc.next();
 			if(ch1.equals("yes")) 
@@ -180,12 +209,14 @@ public static Scanner sc= new Scanner(System.in);
 			break;
 			}
 			
+			temp=mid;
 			//checks boundry values
-			if(a[mid]==a[0] || a[mid]==4096)
+			if(a[mid]==a[0] || a[mid]==n)
 			{
 				System.out.println("not found");
 				break;
 			}
+			
 			System.out.println("is your number greater than: "+a[mid]);
 			ch1=sc.next();
 			
@@ -361,7 +392,7 @@ public static Scanner sc= new Scanner(System.in);
     
     /***********program to print lyrics of poem**********/
     
-    public static void printLyrics()
+    public static String printLyrics()
     {
     	String poem="Old MacDonald had a farm, E-I-E-I-O\n" + 
     			"And on his farm he had a <<ANIMAL>>, E-I-E-I-O\n" + 
@@ -370,7 +401,7 @@ public static Scanner sc= new Scanner(System.in);
     			"There a <<SOUND>>\n" + 
     			"Everywhere <<SOUND>>\n" + 
     			"Old MacDonald had a farm, E-I-E-I-O";
-    	
+    	String result="";
     	
     	for(int i=1;i<=9;i++)
     	{
@@ -378,51 +409,63 @@ public static Scanner sc= new Scanner(System.in);
     		{
     			String fin=poem.replaceAll("<<ANIMAL>>","Chicks" ).replaceAll("<<SOUND>>","chick-chick");
     			System.out.println(fin+"\n");
+    			result=result+fin;
     		}
     		
     		if(i==2)
     		{
     			String fin=poem.replaceAll("<<ANIMAL>>","Duck" ).replaceAll("<<SOUND>>","Quack-quack");
     			System.out.println(fin+"\n");
+    			result=result+fin;
     		}
     		
     		if(i==3)
     		{
     			String fin=poem.replaceAll("<<ANIMAL>>","Turkey" ).replaceAll("<<SOUND>>","gobble-gobble");
     			System.out.println(fin+"\n");
+    			result=result+fin;
     		}
     		if(i==4)
     		{
     			String fin=poem.replaceAll("<<ANIMAL>>","Cow" ).replaceAll("<<SOUND>>","moo-moo");
     			System.out.println(fin+"\n");
+    			result=result+fin;
     		}
     		if(i==5)
     		{
     			String fin=poem.replaceAll("<<ANIMAL>>","Pig" ).replaceAll("<<SOUND>>","oink-oink");
     			System.out.println(fin+"\n");
+    			result=result+fin;
     		}
     		if(i==6)
     		{
     			String fin=poem.replaceAll("<<ANIMAL>>","Cat" ).replaceAll("<<SOUND>>","meow-meow");
     			System.out.println(fin+"\n");
+    			result=result+fin;
     		}
     		if(i==7)
     		{
     			String fin=poem.replaceAll("<<ANIMAL>>","Dog" ).replaceAll("<<SOUND>>","Bow-Bow");
     			System.out.println(fin+"\n");
+    			result=result+fin;
     		}
     		if(i==8)
     		{
     			String fin=poem.replaceAll("<<ANIMAL>>","Mule" ).replaceAll("<<SOUND>>","Heehaw-Heehaw");
     			System.out.println(fin+"\n");
+    			result=result+fin;
     		}
     		if(i==9)
     		{
     			String fin=poem.replaceAll("<<ANIMAL>>","Turtle" ).replaceAll("<<SOUND>>","nerp-nerp");
     			System.out.println(fin);
+    			result=result+fin;
+    			return result;
     		}
-    		
+    	
     	}
+    		return result;
+    	
     }
 
 /**************program to validate user deatails************/
@@ -601,7 +644,7 @@ public static Scanner sc= new Scanner(System.in);
     		System.out.print("row"+(i+1)+"\t");
     		for(int j=0;j<col;j++) 
     		{
-    			System.out.print(doubleArray[i][j]+" ");
+    			System.out.print(" "+doubleArray[i][j]+"\t");
     		}
     		System.out.println();
     	}
@@ -629,7 +672,7 @@ public static Scanner sc= new Scanner(System.in);
     		System.out.print("row"+(i+1)+"\t");
     		for(int j=0;j<col;j++) 
     		{
-    			System.out.print(booleanArray[i][j]+" ");
+    			System.out.print(" "+booleanArray[i][j]+"\t");
     		}
     		System.out.println();
     	}
@@ -644,7 +687,7 @@ public static Scanner sc= new Scanner(System.in);
     /***************prime numbers between 1-1000**************/
     
  
-    	public static void prime2DArray() 
+    	public static int[][] prime2DArray() 
     	{
     		int [][]prime = new int [10][25];
     		int first=0,second=0,third=0,fourth=0;
@@ -715,6 +758,8 @@ public static Scanner sc= new Scanner(System.in);
     			}
     			System.out.println();
     		}
+    		return prime;
+    				
     	}
     	
 
@@ -1227,6 +1272,8 @@ public static Scanner sc= new Scanner(System.in);
 		System.out.print("\n");
 		for(int k=0;k<6;k++)
 		{
+			if(res[k][0]==0)
+				continue;
 			System.out.println((k+1)+" repeated "+res[k][0]+" times.");
 		}
 	
@@ -1244,10 +1291,10 @@ public static Scanner sc= new Scanner(System.in);
 		for(int a=1;a<=x;a++)
 		{
 		int n;
-		System.out.println("enter value of n:");
+		System.out.println("enter "+a+"th value of n:");
 		n=sc.nextInt();
 	
-		series[a-1][0]=n;
+		
 		double sum=0.0;
 		for(int i=1;i<=n;i++)
 			{
@@ -1269,12 +1316,12 @@ public static Scanner sc= new Scanner(System.in);
 	
 	
 	/*******************power of 2************/
-	public static void getPowerOfTwo()
+	public static int[][] getPowerOfTwo()
 	{
-		System.out.println("please enter nth value to find power of 2:");
-		int n=sc.nextInt();
+		//System.out.println("please enter nth value to find power of 2:");
+		int n=20;
 		int unitIndex=0,tenIndex=0,hundredIndex=0;
-		int power[][]=new int[3][5];
+		int power[][]=new int[3][4];
 		
 		for(int i=0;i<=n;i++)
 		{
@@ -1309,7 +1356,7 @@ public static Scanner sc= new Scanner(System.in);
 			System.out.print(power[k][l]+"\t");
 			}
 			System.out.println();
-		}
+		}return power;
 	}
 	
 	

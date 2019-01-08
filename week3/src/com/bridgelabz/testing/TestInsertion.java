@@ -1,4 +1,4 @@
-package com.bridgelabz.SearchingAndSorting;
+package com.bridgelabz.testing;
 
 import static org.junit.Assert.*;
 
