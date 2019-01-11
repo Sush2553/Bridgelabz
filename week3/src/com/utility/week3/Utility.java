@@ -687,13 +687,13 @@ public static Scanner sc= new Scanner(System.in);
     /***************prime numbers between 1-1000**************/
     
  
-    	public static int[][] prime2DArray() 
+    	public static int[][] prime2DArray(int n) 
     	{
     		int [][]prime = new int [10][25];
     		int first=0,second=0,third=0,fourth=0;
     		int fifth=0,sixth=0,seventh=0,eight=0,nineth=0,ten=0;
     	
-    		for(int i=2;i<1000;i++) 
+    		for(int i=2;i<n;i++) 
     		{
     			
     			int flag=0;
@@ -739,25 +739,7 @@ public static Scanner sc= new Scanner(System.in);
     		}
     		}
     		
-    		//print column names
-    		System.out.print("\t\t\t\t");
-    		for(int x=1;x<=20;x++)
-    		{
-    			System.out.print("col"+x+"\t");
-    		}
-    		System.out.println("\n");
     		
-    		//print prime numbers
-    		for(int k=0;k<10;k++)
-    		{
-    		System.out.print("range:"+(k*100+1)+"-"+(k*100+100)+"\t");
-    		System.out.print(" row"+(k+1)+"-->\t");
-    			for(int l=0;l<20;l++) 
-    			{
-    			System.out.print(prime[k][l]+"\t");
-    			}
-    			System.out.println();
-    		}
     		return prime;
     				
     	}
@@ -886,16 +868,22 @@ public static Scanner sc= new Scanner(System.in);
     	 	//****************** method for to check prime anagram check *********//
     	
     	
-    		public static void primePalindromeCheck(int range) 
-    		{
+    		public static int[][] primePalindromeCheck(int range) 
+    		{	int count=0;
+    			int palindrome[][]=new int[1][20];
+    	
     		  for(int index = 2;index<range;index++)
     		  {
     			  if(isPrime(index) && isPallindrome(index))
     			  {
-    				  System.out.println(index+"\t");
+    				  
+    				  palindrome[0][count]=index;
+    				  count++;
+    				 
     			  }
     			  
     		  }
+			return palindrome;
     			
     		}
     		
@@ -938,65 +926,59 @@ public static Scanner sc= new Scanner(System.in);
     		
     	/***********program to find repeated number*********/
 
-    public static int findrepeatedNumber(int[] array) 
+    public static int[] findrepeatedNumber(int[] array) 
     {
-    	int count = 0;
+    	
+    	int repeated[]=new int[1];
     	for(int i=0;i<array.length;i++)
     	{
     		for(int j=i+1;j<array.length;j++)
     		{
     			if(array[i] == array[j]) 
     			{
-    				System.out.println("repeated number:"+array[i]);
-    				count++;
+    				repeated[0]=array[i];
+    				//System.out.println("repeated number:"+array[i]);
+    				
     			}
     		}
     	}
-    			return count;
+    			return repeated;
     }
     		
     		
     /*********transpose of matrix************/
-    public static int[][] matricTraspos(int row,int col){
-    	
-    	int [][]array = new int [row][col];
-    	  System.out.println("Enter element of matrix :");
+    public static int[][] matricTraspos(int row,int col,int array[][])
+    {
     	  
-    	  for(int i=0;i<row;i++) {
-    		  for(int j=0;j<col;j++) {
-    			   array[i][j] = Utility.getInt();
-    		  }
-    	  }
-    	  System.out.println();
-    	  
-    	  System.out.println("original matrix:");
-    	  for(int x=0;x<col;x++)
-    	  {
-    	  System.out.print("\tcol"+(x+1));
-    	  }
-    	  System.out.println();
-    	  
-    	  for(int i=0;i<row;i++)
-    	  {
-    		  System.out.print("row"+(i+1)+" ");
-    		  for(int j=0;j<col;j++) 
-    		  {
-    			  System.out.print("\t "+array[i][j]);
-    			  
-    		  }
-    		  System.out.println();
-    	  }
-    	
-    	 //print final result
-    	  System.out.println("\nafter transpose:");
-    	  for(int x=0;x<col;x++)
-    	  {
-    	  System.out.print("\tcol"+(x+1));
-    	  }
-    	  System.out.println();
+    	System.out.println("original matrix:");
+  	  for(int x=0;x<col;x++)
+  	  {
+  	  System.out.print("\tcol"+(x+1));
+  	  }
+  	  System.out.println();
+  	  
+  	  for(int i=0;i<row;i++)
+  	  {
+  		  System.out.print("row"+(i+1)+" ");
+  		  for(int j=0;j<col;j++) 
+  		  {
+  			  System.out.print("\t "+array[i][j]);
+  			  
+  		  }
+  		  System.out.println();
+  	  }
+  	
+  	 //print final result
+  	  System.out.println("\nafter transpose:");
+  	  for(int x=0;x<col;x++)
+  	  {
+  	  System.out.print("\tcol"+(x+1));
+  	  }
+  	  System.out.println();
+
     	  
     	 
-    	
+    	int newArray[][]=new int[3][3];
     	for(int i=0;i<col;i++) 
     	{
     		 System.out.print("row"+(i+1)+" ");
@@ -1004,12 +986,13 @@ public static Scanner sc= new Scanner(System.in);
     		{
     			
     			System.out.print("\t "+array[j][i]);
+    			newArray[j][i]=array[i][j];
     		}
     		System.out.println();
-    	
+    	}	
 
-    }
-    	return array ;
+    
+    	return newArray ;
 
     }
     
@@ -1366,6 +1349,7 @@ public static Scanner sc= new Scanner(System.in);
 	{
 		int st[][]=new int[50][3];
 		
+		//date
 		for(int i=0;i<50;i++) 
 		{
 		int n= ((int) (Math.random()*(maximum - minimum))) + minimum;
@@ -1391,11 +1375,13 @@ public static Scanner sc= new Scanner(System.in);
 		
 		//display
 		
-		System.out.print("Date\tMonth\tYear\n");
+		System.out.print("\tDate\tMonth\tYear\n");
 		for(int k=0;k<50;k++)
 		{
+			System.out.print((k+1)+":\t");
 			for(int l=0;l<3;l++) 
 			{
+				
 			if(st[k][l]>=28 && st[k][1]==2 )
 				st[k][l]=st[k][l]-2;
 			
@@ -1405,7 +1391,6 @@ public static Scanner sc= new Scanner(System.in);
 			}
 			System.out.println();
 		}
-		
 		
 		
 	}
@@ -1443,6 +1428,7 @@ public static Scanner sc= new Scanner(System.in);
 	    			  
 	    		  }
 	    		  System.out.println();
+	    		  
 	    	  }
 	    	  
 	    	

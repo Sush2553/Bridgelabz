@@ -8,6 +8,8 @@ public class IntDoubleBooleanArray {
 		// TODO Auto-generated method stub
 		System.out.println("1.integer array\n2.double array\n3.boolean array\nenter your choice:");
 		int n=Utility.sc.nextInt();
+	
+    	
 		Utility.print2DArray(n);
 	}
 

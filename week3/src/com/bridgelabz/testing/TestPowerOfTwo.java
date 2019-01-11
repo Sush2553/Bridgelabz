@@ -1,4 +1,4 @@
-package com.bridgelabz.testing;
+ package com.bridgelabz.testing;
 
 import static org.junit.Assert.*;
 
@@ -16,6 +16,4 @@ public class TestPowerOfTwo {
 		
 		assertArrayEquals(expected,res);
 	}
-	
-
 }
