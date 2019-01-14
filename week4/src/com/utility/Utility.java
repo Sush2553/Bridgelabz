@@ -1,15 +1,13 @@
 package com.utility;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Utility {
+public class Utility
+{
 public static Scanner sc= new Scanner(System.in);
-
-	
 
 	/**This method takes integer input from user
 	 * @return integer value
@@ -70,8 +68,7 @@ public static Scanner sc= new Scanner(System.in);
 		return booleanValue;
 	}
 
-/***********read poem from file
- * @throws IOException *********/
+/***********read poem from file *********/
 	public static void readPoemFromFile() throws IOException
 	{
 		Scanner file=new Scanner(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/lyrics.txt"));
@@ -145,14 +142,12 @@ public static Scanner sc= new Scanner(System.in);
 	}
 	
 	
-	/****************birth dates
-	 * @throws IOException ************/
+	/****************birth dates************/
 	public static void getBirthDate(int maximum, int minimum) throws IOException
 	{
-		Scanner file=new Scanner(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/birthdates.txt"));
 		FileWriter fw=new FileWriter(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/birthdates.txt"));
 		int st[][]=new int[50][3];
-		fw.write(575);
+		
 		//date
 		for(int i=0;i<50;i++) 
 		{
@@ -179,24 +174,112 @@ public static Scanner sc= new Scanner(System.in);
 		
 		//display
 		
-		System.out.print("\tDate\tMonth\tYear\n");
+		fw.write("\tDate\tMonth\tYear\n");
 		for(int k=0;k<50;k++)
 		{
-			System.out.print((k+1)+":\t");
+			fw.write((k+1)+":\t");
 			for(int l=0;l<3;l++) 
 			{
-				
 			if(st[k][l]>=28 && st[k][1]==2 )
 				st[k][l]=st[k][l]-2;
 			
 			if(st[k][2]<1992)
 				st[k][2]=1993;
-			System.out.print(st[k][l]+"\t");
-			fw.write(st[k][l]);
-			fw.write("ddd");
+			String newArr =(Integer.toString(st[k][l])+"\t\t");
+			fw.write(newArr);
+			
 			}
-			System.out.println();
+			fw.write("\n");
+			
 		}
-		
+		fw.close();
 	}
+
+
+
+/******************minimum and maximum from file
+ * @throws IOException **********/
+
+public static void getMinimumMaximum() throws IOException
+{
+	Scanner file=new Scanner(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/MinMax.txt"));
+	
+	int arr[]=new int[6];
+	//read from file
+	while(file.hasNext())
+	{
+	
+	for(int i=0;i<6;i++)
+	{
+		String n=file.nextLine();
+		int a=Integer.parseInt(n);
+		arr[i]=a;
+	}
+	
+	}
+	file.close();
+	
+	FileWriter fw=new FileWriter(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/com/week4/file/MinMaxOutput.txt"));
+	//compare to find min 
+	int temp=arr[0];
+	for(int i=1;i<arr.length;i++)
+	{
+		if(arr[i]<temp)
+		{
+		temp=arr[i];
+		}
+	}
+	fw.write("minimum is:"+temp+"\n");
+	
+	//max
+	int temp1=arr[0];
+	for(int i=1;i<arr.length;i++)
+	{
+		if(arr[i]>temp1)
+		{
+		temp1=arr[i];
+		}
+	}
+
+	fw.write("maximum is:"+temp1);
+	fw.close();
+	file.close();
+}
+
+/*******************average of floting point numbers in file
+ * @throws IOException *********/
+
+public static void getAverage() throws IOException
+{
+	Scanner file=new Scanner(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/com/week4/file/average.txt"));
+	float arr[]=new float[10];
+	while(file.hasNextLine())
+	{
+		for(int i=0;i<10;i++)
+		{
+			String input=file.nextLine();
+			float n=Float.parseFloat(input);
+			arr[i]=n;
+		}
+	}
+	file.close();
+	
+	FileWriter fw=new FileWriter(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/com/week4/file/averageOutput.txt"));
+	int count=0;
+	float sum=0;
+	for(int i=0;i<arr.length;i++)
+	{
+		count++;
+		sum=sum+arr[i];
+	}
+	System.out.println("sum:"+sum);
+	
+	float average=sum/count;
+	System.out.println("average of is:"+average);
+	fw.write("average:"+average);
+	fw.close();
+}
+
+
+
 }
