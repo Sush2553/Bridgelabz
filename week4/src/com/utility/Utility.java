@@ -1,9 +1,19 @@
 package com.utility;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Scanner;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+
+
+
 
 public class Utility
 {
@@ -280,6 +290,170 @@ public static void getAverage() throws IOException
 	fw.close();
 }
 
+/************Transpose of matrix
+ * @throws IOException *************/
 
+public static void transposeOfMatrix() throws IOException
+{
+	Scanner file=new Scanner(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/com/week4/file/Transpose.txt"));
+	 FileWriter fw=new FileWriter(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/com/week4/file/TransposeOutput"));
+	  	
+	int array[][]=new int[3][3];
+	  for(int i=0;i<3;i++) 
+  	  {
+  		  for(int j=0;j<3;j++) 
+  		  {
+  			  String input=file.nextLine();
+  			  int n=Integer.parseInt(input);
+  			   array[i][j] = n;
+  		  }
+  	  }
+	  
+		System.out.println("original matrix:");
+		fw.write("original matrix:\n");
+		fw.write("\t\t");
+	  	  for(int x=0;x<3;x++)
+	  	  {
+	  	  System.out.print("\tcol"+(x+1));
+	  	  fw.write("\tcol"+(x+1)+" ");
+	  	  }
+	  	  System.out.println();
+	  	  fw.write("\n");
+	  	  
+	  	  for(int i=0;i<3;i++)
+	  	  {
+	  		  System.out.print("row"+(i+1)+" ");
+	  		  fw.write("row"+(i+1)+" ");
+	  		  for(int j=0;j<3;j++) 
+	  		  {
+	  			  System.out.print("\t "+array[i][j]);
+	  			  fw.write("\t\t"+" "+array[i][j]);
+	  			  
+	  		  }
+	  		  System.out.println();
+	  		 fw.write("\n");
+	  	  }
+	  	
+	  	  
+	  	  //print final result
+	  	  System.out.println("\nafter transpose:");
+	  	fw.write("\n after transpose:\n");
+	  	fw.write("\t\t");
+	  	  for(int x=0;x<3;x++)
+	  	  {
+	  	  System.out.print("\tcol"+(x+1));
+	  	  fw.write("\tcol"+(x+1)+" ");
+	  	  }
+	  	  System.out.println();
+	  	 fw.write("\n");
+	    	  
+	    	 
+	    	int newArray[][]=new int[3][3];
+	    	for(int i=0;i<3;i++) 
+	    	{
+	    		 System.out.print("row"+(i+1)+" ");
+	    		  fw.write("row"+(i+1)+" ");
+	    		for(int j=0;j<3;j++)
+	    		{
+	    			
+	    			System.out.print("\t "+array[j][i]);
+	    			fw.write("\t\t"+" "+array[j][i]);
+	    			newArray[j][i]=array[i][j];
+	    		}
+	    		System.out.println();
+	    		 fw.write("\n");
+	    	}	
+	    	fw.close();
+	    	file.close();
+
+}
+
+
+/************Determinant of matrix
+ * @throws IOException ************/
+
+public static void calculateDeterminantOfMatrix() throws IOException
+{
+	Scanner file=new Scanner(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/com/week4/file/Transpose.txt"));
+	 FileWriter fw=new FileWriter(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/com/week4/file/DeterminantOfMatrix.txt"));
+	  	
+	int array[][]=new int[3][3];
+	  for(int i=0;i<3;i++) 
+ 	  {
+ 		  for(int j=0;j<3;j++) 
+ 		  {
+ 			  String input=file.nextLine();
+ 			  int n=Integer.parseInt(input);
+ 			   array[i][j] = n;
+ 		  }
+ 	  }
+	  //display
+		System.out.println("your matrix:");
+		fw.write("your matrix:\n");
+		fw.write("\t\t");
+	  	  for(int x=0;x<3;x++)
+	  	  {
+	  	  System.out.print("\tcol"+(x+1));
+	  	  fw.write("col"+(x+1)+" ");
+	  	  }
+	  	  System.out.println();
+	  	  fw.write("\n");
+	  	  
+	  	 for(int i=0;i<3;i++)
+	  	  {
+	  		  System.out.print("row"+(i+1)+" ");
+	  		  fw.write("row"+(i+1)+" ");
+	  		  for(int j=0;j<3;j++) 
+	  		  {
+	  			  System.out.print("\t "+array[i][j]);
+	  			  fw.write("\t "+" "+array[i][j]);
+	  			  
+	  		  }
+	  		  System.out.println();
+	  		 fw.write("\n");
+	  	  }
+    	  int result1=array[0][0]*((array[1][1]*array[2][2])-(array[2][1]*array[1][2]));
+    	  int result2=array[0][1]*((array[1][0]*array[2][2])-(array[2][0]*array[1][2]));
+    	  int result3= array[0][2]*((array[1][0]*array[2][1])-(array[2][0]*array[1][1]));
+	      int finalResult=result1-result2+result3;
+	      System.out.println("Determinant:"+finalResult);
+	      fw.write("\nDeterminant:"+finalResult);
+	
+	      fw.close();
+	      file.close();
+}
+
+
+
+public static void jsonExample()
+{
+    JSONParser parser = new JSONParser();
+    
+    try {
+
+        Object obj = parser.parse(new FileReader(
+                "/home/admin1/Desktop/pre-felloship-programs/week4/src/com/week4/file/JSonExample.txt"));
+
+        JSONObject jsonObject = (JSONObject) obj;
+
+        String name = (String) jsonObject.get("Name");
+        String author = (String) jsonObject.get("Author");
+        JSONArray companyList = (JSONArray) jsonObject.get("Company List");
+
+        System.out.println("Name: " + name);
+        System.out.println("Author: " + author);
+        System.out.println("\nCompany List:");
+        @SuppressWarnings("unchecked")
+		Iterator<String> iterator = companyList.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    
+}
+
+}
 
 }

@@ -1,0 +1,11 @@
+original matrix:
+			col1 	col2 	col3 
+row1 		 2		 3		 5
+row2 		 1		 5		 6
+row3 		 7		 8		 9
+
+ after transpose:
+			col1 	col2 	col3 
+row1 		 2		 1		 7
+row2 		 3		 5		 8
+row3 		 5		 6		 9

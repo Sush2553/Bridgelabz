@@ -1,12 +1,12 @@
-package com.bridgelabz.functional;
+package com.week4.file;
 
 import com.utility.Utility;
 
-public class Quadratic {
+public class JsonExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Utility.rootsOfQuadraticEquation(2,12,4);
+		Utility.jsonExample();
 	}
 
 }
