@@ -1,9 +1,12 @@
-{
-    "Name": "bridgelabz",
-    "Author": "Sushant",
-    "Company List": [
-        "Compnay: eBay",
-        "Compnay: Paypal",
-        "Compnay: Google"
-    ]
+{"rice":
+     [
+     {"name":"Daawat","weight": "25kg", "price": "500"},
+     {"name":"Lal Qilla","weight": "50kg", "price": "1000"}
+	]
+	
+	"pulses":
+     [
+     {"name":"Dry beans","weight": "25kg", "price": "600"},
+     {"name":"Green gram","weight": "50kg", "price": "1000"}
+	]
 }

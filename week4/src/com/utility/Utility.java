@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.Scanner;
 
 import org.json.simple.JSONArray;
@@ -435,25 +434,35 @@ public static void jsonExample()
                 "/home/admin1/Desktop/pre-felloship-programs/week4/src/com/week4/file/JSonExample.txt"));
 
         JSONObject jsonObject = (JSONObject) obj;
-
-        String name = (String) jsonObject.get("Name");
-        String author = (String) jsonObject.get("Author");
-        JSONArray companyList = (JSONArray) jsonObject.get("Company List");
-
-        System.out.println("Name: " + name);
-        System.out.println("Author: " + author);
-        System.out.println("\nCompany List:");
-        @SuppressWarnings("unchecked")
-		Iterator<String> iterator = companyList.iterator();
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
-        }
+   
+		Object arr=new JSONArray();
+        arr= jsonObject.get("rice");
+    
+		Object arr1=new JSONArray();
+       arr1=jsonObject.get("pulses");
+       System.out.println(jsonObject);    
 
     } catch (Exception e) {
         e.printStackTrace();
     
 }
 
+}
+
+
+
+@SuppressWarnings("unchecked")
+public static void jSonWrite()
+{
+	JSONObject empobj1=new JSONObject();
+	empobj1.put("fname","Sushant");
+	empobj1.put("lname","Patwari");
+	empobj1.put("phone","7558525201");
+
+	//JSONObject employee=new JSONObject();
+	//employee.put("emp details",empobj1);
+	
+	System.out.println(empobj1);
 }
 
 }
