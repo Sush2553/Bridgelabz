@@ -19,7 +19,7 @@ class TicTacToe {
 	int[][] board = new int[3][3];
 	int move;
 	int winner;
-	System.out.println("Enter 1-9 to move");
+//	System.out.println("Enter 1-9 to move");
 	print_board(board);
 
 	// While (game not over)
@@ -28,10 +28,10 @@ class TicTacToe {
 	    if(turn == USER)
 	    {
 		System.out.println("Your move");
-		move = -1;
+		move=-1 ;
 		while (move<0 || move>9 || board[move/3][move%3] != EMPTY) 
 		{
-		System.out.println("Please enter your move(0-9): ");
+		System.out.println("Please enter your move(0-8): ");
 		move = sc.nextInt();
 		    
 		}

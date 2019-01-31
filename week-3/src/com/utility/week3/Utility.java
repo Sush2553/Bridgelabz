@@ -199,6 +199,7 @@ public static Scanner sc= new Scanner(System.in);
 		while(low<=high) 
 		{
 			mid = (low+high)/2;
+			
 			if(temp==mid)
 				System.out.println("not found");
 			System.out.println("is your number: "+a[mid]);
@@ -217,11 +218,16 @@ public static Scanner sc= new Scanner(System.in);
 				break;
 			}
 			
+			if(a[mid]-a[low]==2)
+			{
+				System.out.println("your number must be: "+a[mid-1] +" or "+a[mid+1]);
+			break;
+			}
 			System.out.println("is your number greater than: "+a[mid]);
 			ch1=sc.next();
 			
 			if(ch1.equals("no")) 
-		
+				
 				high = mid ;
 		
 			else 
@@ -865,7 +871,7 @@ public static Scanner sc= new Scanner(System.in);
     				return false;
     		}
     		
-    	 	//****************** method for to check prime anagram check *********//
+    	 	//****************** method for to check prime palindrome *********//
     	
     	
     		public static int[][] primePalindromeCheck(int range) 
