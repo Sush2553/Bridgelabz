@@ -165,7 +165,7 @@ public class Utility {
 	
 	
 	//program for balanced parenthesis
-	
+	//expression is balanced or not
 	public static void checkForBalancedParenthesis()
 	{
 		int top =-1,result=0;
