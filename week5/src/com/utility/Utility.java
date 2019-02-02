@@ -199,7 +199,7 @@ public class Utility {
 				result=1;
 		}
 			
-		if(result==1)
+		if(result==1 && top==-1)
 				System.out.println("expression is balanced..");
 			
 		else
