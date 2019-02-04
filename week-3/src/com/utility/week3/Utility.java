@@ -1315,7 +1315,6 @@ public static Scanner sc= new Scanner(System.in);
 		for(int i=0;i<=n;i++)
 		{
 			int result=(int) Math.pow(2,i);
-			
 			if(result>=0 && result<=9)
 			{
 			power[0][unitIndex]=result;
