@@ -34,7 +34,6 @@
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
     <fullyQualifiedTypeName name="com.sun.tools.javac.code.Scope.WriteableScope"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.utility.week3.Utility"/>
@@ -45,16 +44,20 @@
     <fullyQualifiedTypeName name="com.utility.Utility"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.classfile.Utility"/>
     <fullyQualifiedTypeName name="algorithm_programs.ElapsedTimeForMethods"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="algorithm_programs.VendingMachine"/>
     <fullyQualifiedTypeName name="data_structure_programs.ImplementBankingCashCounter"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="data_structure_programs.ImplementCalendar"/>
-    <fullyQualifiedTypeName name="utility.Utility"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="com.unoderedList.UnOrderList"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="data_structure_programs.HashNode"/>
+    <fullyQualifiedTypeName name="data_structure_programs.ImplementCalendar"/>
+    <fullyQualifiedTypeName name="data_structure_programs.Queue"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="utility.Utility"/>
+    <fullyQualifiedTypeName name="java.math.BigInteger"/>
 </qualifiedTypeNameHistroy>
