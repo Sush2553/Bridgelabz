@@ -377,24 +377,15 @@ public static Scanner sc= new Scanner(System.in);
 	        String fdate = Date.format(date);
 	       
 	        
-	        Message = details(Message, regexName, firstName);
-	        Message = details(Message, regexFname,fullName );
-	        Message = details(Message, regexNum, mobile);
-	        Message = details(Message, regexDate, fdate);
+	        Message = Message.replaceAll(regexName, firstName);
+	        Message = Message.replaceAll(regexFname,fullName );
+	        Message = Message.replaceAll(regexNum, mobile);
+	        Message = Message.replaceAll(regexDate, fdate);
 	       
 
 	        System.out.println(Message);
 	}
 	
-    public static String details(String Template , String regexName , String regexFname){
-	       
-        Pattern pattern = Pattern.compile(regexName);
-       
-        //matcher object
-        Matcher match = pattern.matcher(Template);
-        return match.replaceAll(regexFname);
-
-    }
     
     /***********program to print lyrics of poem**********/
     

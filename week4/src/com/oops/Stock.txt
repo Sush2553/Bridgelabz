@@ -1,0 +1,21 @@
+{"Stock":[
+			{
+			"Stock_Name":"AdityaBirla",
+			"Number_of_shares":"35",
+			"Share_Prize":"50"
+			},
+			
+			{
+			"Stock_Name":"Airtel",
+			"Number_of_shares":"58",
+			"Share_Prize":"55"
+			},
+			
+			
+			{
+			"Stock_Name":"Idea",
+			"Number_of_shares":"37",
+			"Share_Prize":"20"
+			}
+           ]
+    }
