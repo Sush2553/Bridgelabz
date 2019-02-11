@@ -4,11 +4,14 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class Utility
 {
@@ -64,7 +67,7 @@ public static Scanner sc= new Scanner(System.in);
 	 */
 	public static String getString() {
 
-		String string = sc.nextLine();
+		String string = sc.next();
 		return string;
 	}
 	
@@ -460,5 +463,17 @@ public static void jSonWrite()
 	
 	System.out.println(empobj1);
 }
+
+public static Date printDate(String date) throws java.text.ParseException{
+	SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
+	return sdf.parse(date);
+}
+
+//format date object in this format 01/12/2016 
+public String getFormatedDate(Date date){
+	SimpleDateFormat sdf=new SimpleDateFormat("dd/mm/yyyy");
+	return sdf.format(date);
+}
+
 
 }
