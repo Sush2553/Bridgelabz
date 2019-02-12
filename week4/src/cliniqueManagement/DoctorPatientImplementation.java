@@ -114,13 +114,14 @@ public class DoctorPatientImplementation implements DoctorAndPatientData {
 		id = Utility.getInt();
 		int i = 0;
 		for (i = 0; i < doctorlist.size(); i++) {
-			if (doctorlist.get(i).getId() == id) {
+			if (i == doctorlist.size()) {
+				System.out.println("INVALID ID");
+			}
+			else if (doctorlist.get(i).getId() == id) {
 				doctorlist.remove(i);
 			}
 		}
-		if (i == doctorlist.size()) {
-			System.out.println("INVALID ID");
-		}
+		
 	}
 
 //add new patient

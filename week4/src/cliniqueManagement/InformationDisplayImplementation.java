@@ -52,10 +52,12 @@ public class InformationDisplayImplementation implements InformationDisplay {
 			case 3:
 				System.out.println("Exiting");
 				break;
+			case 4:
+				break;
 			default:
 				System.out.println("Invalid Entry");
 			}
-		} while (Answer != 3);
+		} while (Answer != 4);
 	}
 
 	@Override
