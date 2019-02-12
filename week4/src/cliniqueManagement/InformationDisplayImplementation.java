@@ -72,7 +72,7 @@ public class InformationDisplayImplementation implements InformationDisplay {
 	@Override
 	public void doctorInformation() {
 		// TODO Auto-generated method stub
-		// String spaces=" ";
+
 		System.out.println("Name     id  availability  specialization");
 		doctorlist.stream().forEach(i -> {
 			System.out.println(

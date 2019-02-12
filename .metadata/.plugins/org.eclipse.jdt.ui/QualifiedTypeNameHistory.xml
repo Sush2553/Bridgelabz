@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
-    <fullyQualifiedTypeName name="java.io.UnsupportedEncodingException"/>
-    <fullyQualifiedTypeName name="com.sun.net.httpserver.Authenticator.Result"/>
-    <fullyQualifiedTypeName name="org.junit.runner.JUnitCore"/>
-    <fullyQualifiedTypeName name="com.sun.net.httpserver.Authenticator.Failure"/>
-    <fullyQualifiedTypeName name="java.util.Locale"/>
-    <fullyQualifiedTypeName name="com.utility.week2.Utility"/>
-    <fullyQualifiedTypeName name="com.bridgelabz.lib.BLStdOut"/>
-    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
     <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
     <fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
@@ -39,9 +28,7 @@
     <fullyQualifiedTypeName name="com.utility.week3.Utility"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="com.week5.dataStructure.Node"/>
-    <fullyQualifiedTypeName name="com.utility.Utility"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.classfile.Utility"/>
     <fullyQualifiedTypeName name="algorithm_programs.ElapsedTimeForMethods"/>
     <fullyQualifiedTypeName name="algorithm_programs.VendingMachine"/>
@@ -60,4 +47,17 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="utility.Utility"/>
     <fullyQualifiedTypeName name="java.math.BigInteger"/>
+    <fullyQualifiedTypeName name="com.utility.Utility"/>
+    <fullyQualifiedTypeName name="jdk.internal.org.objectweb.asm.TypeReference"/>
+    <fullyQualifiedTypeName name="org.codehaus.jackson.type.TypeReference"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.function.Predicate"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.functions.Function"/>
+    <fullyQualifiedTypeName name="org.codehaus.jackson.JsonEncoding"/>
+    <fullyQualifiedTypeName name="org.codehaus.jackson.map.ObjectMapper"/>
+    <fullyQualifiedTypeName name="java.util.function.Function"/>
+    <fullyQualifiedTypeName name="org.codehaus.jackson.JsonGenerator"/>
+    <fullyQualifiedTypeName name="org.codehaus.jackson.JsonFactory"/>
 </qualifiedTypeNameHistroy>
