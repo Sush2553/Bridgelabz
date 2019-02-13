@@ -14,7 +14,8 @@ public class CommercialRunner {
 	static ArrayList<CommercialPojo> ours = new ArrayList<>();
 	{
 		try {
-			ours = mapper.readValue(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/commercialDataProcessing/ourSymbol.json"),
+			ours = mapper.readValue(new File(
+					"/home/admin1/Desktop/pre-felloship-programs/week4/src/commercialDataProcessing/ourSymbol.json"),
 					new TypeReference<List<CommercialPojo>>() {
 					});
 
@@ -22,8 +23,8 @@ public class CommercialRunner {
 
 		}
 	}
-	public static void main(String args[]) throws Exception {
 
+	public static void main(String args[]) throws Exception {
 		int Option = 0;
 		do {
 			System.out.println("\n1. Add data");
@@ -61,10 +62,10 @@ public class CommercialRunner {
 				System.out.println("Which symbol you want to buy:");
 				String symbol = Utility.getString();
 				System.out.println("enter company name:");
-				String name1=Utility.getString();
+				String name1 = Utility.getString();
 				System.out.println("enter symbol price:");
-				int price1=Utility.getInt();
-				ours.add(new CommercialPojo(name1,symbol,price1));
+				int price1 = Utility.getInt();
+				ours.add(new CommercialPojo(name1, symbol, price1));
 				save();
 				System.out.println("transaction successful...buyed");
 				break;
@@ -73,7 +74,7 @@ public class CommercialRunner {
 				removeData();
 				save();
 				break;
-			
+
 			case 6:
 				System.out.println("Exiting");
 				break;
@@ -85,7 +86,6 @@ public class CommercialRunner {
 
 	}
 
-	
 	private static void removeData() {
 		// TODO Auto-generated method stub
 		System.out.println("Enter Symbol");
@@ -93,29 +93,30 @@ public class CommercialRunner {
 		int i = 0;
 		for (i = 0; i < ours.size(); i++) {
 			if (i == ours.size()) {
-				System.out.println("Invalid ");}
-				else if (ours.get(i).getSymbol().equals(symbol)) {
+				System.out.println("Invalid ");
+			} else if (ours.get(i).getSymbol().equals(symbol)) {
 				ours.remove(i);
 			}
-
-		
-			}
 		}
-	
+	}
 
 	public static void displayInformation() throws JsonMappingException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("Name\tstock\tvalue");
-		int i=0;
-		for(i=0;i<ours.size();i++) {
-			System.out.println(ours.get(i).getCompanyName() + "\t  " + ours.get(i).getSymbol() + "\t" + ours.get(i).getSymbolValue());
-		};
+		int i = 0;
+		for (i = 0; i < ours.size(); i++) {
+			System.out.println(ours.get(i).getCompanyName() + "\t  " + ours.get(i).getSymbol() + "\t"
+					+ ours.get(i).getSymbolValue());
+		}
+		;
 	}
 
 	public static void save() {
 		try {
 
-			mapper.writeValue(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/commercialDataProcessing/ourSymbol.json"),ours);
+			mapper.writeValue(new File(
+					"/home/admin1/Desktop/pre-felloship-programs/week4/src/commercialDataProcessing/ourSymbol.json"),
+					ours);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
