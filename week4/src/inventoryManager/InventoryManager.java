@@ -71,7 +71,7 @@ public class InventoryManager {
 			int i = 0;
 			for (i = 0; i < details.size(); i++) 
 			{
-				if (details.get(i).getproductname()==productName) 
+				if (details.get(i).getproductname().equals(productName)) 
 				{
 					details.remove(i);
 				}

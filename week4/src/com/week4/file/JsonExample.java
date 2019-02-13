@@ -6,8 +6,8 @@ public class JsonExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Utility.jsonExample();
-		//Utility.jSonWrite();
+		//Utility.jsonExample();
+		Utility.jSonWrite();
 	}
 
 }

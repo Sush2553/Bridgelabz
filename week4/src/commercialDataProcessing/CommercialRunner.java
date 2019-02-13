@@ -108,7 +108,6 @@ public class CommercialRunner {
 			System.out.println(ours.get(i).getCompanyName() + "\t  " + ours.get(i).getSymbol() + "\t"
 					+ ours.get(i).getSymbolValue());
 		}
-		;
 	}
 
 	public static void save() {

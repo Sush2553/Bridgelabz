@@ -30,7 +30,6 @@ public class CompanySharesInQueueImplement {
 				System.out.println("data deleted.....");
 				break;
 			case 3:
-				System.out.println("company name\t total shares\t share value");
 				queue.display();
 				break;
 			default:
