@@ -1,6 +1,12 @@
 package com.oops;
 
-import com.utility.Utility;
+import java.io.File;
+import java.io.IOException;
+import java.util.LinkedList;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
+import commercialDataProcessing.ComPojo;
 
 /**
  * @author Sushant Patwari
@@ -8,37 +14,30 @@ import com.utility.Utility;
  * @aim To store purchased symbol unto the stack using linked list
  */
 public class StoreSymbolPurchasedInStack {
-	public static void main(String args[]) {
+	public static void main(String args[]) throws  JsonMappingException, IOException {
 		String companyName;
 		String symbol;
 		String value;
+		ObjectMapper mapper = new ObjectMapper();
 		Stack<String> stack = new Stack<>(); //create object of stack class
-		while (true) {
-			System.out.println("\n1. Buy symbol\n2. Sell symbol\n3. display data\n");
-			System.out.println("enter your choice:");
-			int choice = Utility.getInt(); //get users choice
-			switch (choice) {
-			case 1:
-				System.out.println("enter company name:");
-				companyName = Utility.getString();
-				System.out.println("enter symbol:");
-				symbol = Utility.getString();
-				System.out.println("enter price:");
-				value = Utility.getString();
-				stack.push(companyName,symbol,value); //push data into the stack
-				System.out.println("buyed.........");
-				break;
-			case 2:
-				stack.pop();
-				System.out.println("selled.....");  //pop data from stack
-				break;
-			case 3:
-				System.out.println("company\tsymbol\tvalue");
-				stack.display();  //display data from the stack
-				break;
-			default:
-				System.out.println("invalid choice");
+		LinkedList<ComPojo> data1 = mapper.readValue(new File(
+				"/home/admin1/Desktop/pre-felloship-programs/week4/src/commercialDataProcessing/ourSymbol.json"),
+				new TypeReference<LinkedList<ComPojo>>() {
+				});
+		int i = 0;
+		int size = data1.size();
+		if (size == 0)
+			System.out.println("\nno data found");
+		else {
+
+			for (i = 0; i < data1.size(); i++) {
+				companyName = data1.get(i).getCompanyName().trim();
+				symbol = data1.get(i).getSymbol().trim();
+				value=data1.get(i).getSymbolValue();
+				stack.push(companyName+"\t", symbol+"\t", value); // add data to stack
 			}
 		}
+		System.out.println("company\t   symbol\t   Symbolvalue\n");
+		stack.display();
 	}
 }

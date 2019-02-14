@@ -51,6 +51,7 @@ public class AddressBook {
 				break;
 			// perform different operation on address book
 			case 3:
+				//manage
 				File file1[] = manager.openFile();//store file names from given location by calling openFile method
 				for (File file2 : file1) {
 					System.out.println(file2.getName());

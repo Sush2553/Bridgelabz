@@ -31,10 +31,10 @@ class AddressBookManager implements manager {
 
 	// create new address book
 	public static boolean createAddressBook(String name) throws IOException, Exception {
-		// create file with user name
+		// create file with user provided name
 		File file = new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/addressBook/" + name + ".json");
 
-		// check file create or not
+		// check file created or not
 		boolean result = file.createNewFile();
 
 		return result;
