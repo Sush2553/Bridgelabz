@@ -1,5 +1,9 @@
 package com.oops;
-
+/**
+ * @author Sushant Patwari
+ * @since  08/02/2019
+ * @aim Pojo class for inventory factory
+ */
 public class InventoryFactory {
 	private String inventoryName;
 	private int inventoryNumber;

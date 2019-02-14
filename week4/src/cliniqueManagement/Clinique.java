@@ -1,5 +1,9 @@
 package cliniqueManagement;
-
+/**
+ * @author Sushant Patwari
+ * @since  10/02/2019
+ * @aim runner class for clinique management
+ */
 import java.text.ParseException;
 import java.util.Date;
 import com.utility.Utility;
@@ -19,12 +23,15 @@ static Date date;
 			switch(choice)
 			{
 			case 1:
+				//to add doctor or patients details or to fix appointment
 				new DoctorPatientImplementation().operation();
 				break;
 			case 2:
+				//to search doctor details
 				new SearchingImplementation().operation();
 				break;
 			case 3:
+				//to display information
 				new InformationDisplayImplementation().operation();
 				break;
 			case 4:

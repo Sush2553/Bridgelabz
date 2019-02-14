@@ -1,5 +1,9 @@
 package cliniqueManagement;
-
+/**
+ * @author Sushant Patwari
+ * @since  10/02/2019
+ * @aim to search doctor from list
+ */
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,13 +13,14 @@ import org.codehaus.jackson.type.TypeReference;
 import com.utility.Utility;
 
 public class SearchingImplementation implements Searching {
-
+//to store data in arraylist
 	static ObjectMapper mapper = new ObjectMapper();
 	List<Patients> personlist = new ArrayList<>();
 	List<Doctor> doctorlist = new ArrayList<>();
 	List<Appointment> appointmentlist = new ArrayList<>();
 	{
 		try {
+			//read files into arraylist
 			personlist = mapper.readValue(
 					new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/cliniqueManagement/Patients.json"),
 					new TypeReference<List<Patients>>() {
@@ -52,27 +57,27 @@ public class SearchingImplementation implements Searching {
 			Answer = Utility.getInt();
 			switch (Answer) {
 			case 1:
-				searchByDoctorName();
+				searchByDoctorName(); //search doctor by name
 				break;
 			case 2:
-				searchByDoctorId();
+				searchByDoctorId(); //search docor by id
 				break;
 
 			case 3:
-				searchByDoctorSpecialization();
+				searchByDoctorSpecialization(); //search doctor by specialization
 				break;
 
 			case 4:
-				searchByDoctorAvailability();
+				searchByDoctorAvailability(); //search doctor by availability
 				break;
 			case 5:
-				searchByPatientName();
+				searchByPatientName(); //search patient by name
 				break;
 			case 6:
-				serarchByPatientid();
+				serarchByPatientid(); //serach patient by id
 				break;
 			case 7:
-				searchByPatientphone();
+				searchByPatientphone(); //search patient by phone number
 				break;
 
 			case 8:
@@ -84,6 +89,7 @@ public class SearchingImplementation implements Searching {
 	}
 
 	@Override
+	//patient by name
 	public void searchByPatientName() {
 		// TODO Auto-generated method stub
 		System.out.println("Enter Name");
@@ -98,6 +104,7 @@ public class SearchingImplementation implements Searching {
 	}
 
 	@Override
+	//patient by id
 	public void serarchByPatientid() {
 		// TODO Auto-generated method stub
 		System.out.println("Enter id");
@@ -113,6 +120,7 @@ public class SearchingImplementation implements Searching {
 	}
 
 	@Override
+	//search patient by phone number
 	public void searchByPatientphone() {
 		// TODO Auto-generated method stub
 		System.out.println("Enter phone");
@@ -126,6 +134,7 @@ public class SearchingImplementation implements Searching {
 	}
 
 	@Override
+	//search doctor by name
 	public void searchByDoctorName() {
 		// TODO Auto-generated method stub
 
@@ -141,6 +150,7 @@ public class SearchingImplementation implements Searching {
 	}
 
 	@Override
+	//search doctor by id
 	public void searchByDoctorId() {
 		// TODO Auto-generated method stub
 		System.out.println("Enter id");
@@ -155,6 +165,7 @@ public class SearchingImplementation implements Searching {
 	}
 
 	@Override
+	//search doctor by specialization
 	public void searchByDoctorSpecialization() {
 		// TODO Auto-generated method stub
 		System.out.println("Enter Specialization");
@@ -169,6 +180,7 @@ public class SearchingImplementation implements Searching {
 	}
 
 	@Override
+	//search doctor by availability
 	public void searchByDoctorAvailability() {
 		// TODO Auto-generated method stub
 		System.out.println("Enter Availability");

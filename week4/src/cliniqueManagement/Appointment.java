@@ -1,5 +1,9 @@
 package cliniqueManagement;
-
+/**
+ * @author Sushant Patwari
+ * @since  10/02/2019
+ * @aim pojo class for Appointment
+ */
 public class Appointment {
 	
 	String doctorName;

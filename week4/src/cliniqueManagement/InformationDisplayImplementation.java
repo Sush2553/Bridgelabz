@@ -1,5 +1,9 @@
 package cliniqueManagement;
-
+/**
+ * @author Sushant Patwari
+ * @since  10/02/2019
+ * @aim class to implement methods to display doctor,patient and appointment details
+ */
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,14 +12,14 @@ import org.codehaus.jackson.type.TypeReference;
 import com.utility.Utility;
 
 public class InformationDisplayImplementation implements InformationDisplay {
-
 	static ObjectMapper mapper = new ObjectMapper();
-	List<Patients> personlist = new ArrayList<>();
+	List<Patients> personlist = new ArrayList<>(); //to store data in arraylist
 	List<Doctor> doctorlist = new ArrayList<>();
 	List<Appointment> appointmentlist = new ArrayList<>();
 
 	{
 		try {
+			//to read files
 			personlist = mapper.readValue(
 					new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/cliniqueManagement/Patients.json"),
 					new TypeReference<List<Patients>>() {
@@ -44,10 +48,10 @@ public class InformationDisplayImplementation implements InformationDisplay {
 			Answer = Utility.getInt();
 			switch (Answer) {
 			case 1:
-				doctorInformation();
+				doctorInformation(); //print doctors data
 				break;
 			case 2:
-				patientInformation();
+				patientInformation(); //print patients data
 				break;
 			case 3:
 				System.out.println("Exiting");
@@ -61,6 +65,7 @@ public class InformationDisplayImplementation implements InformationDisplay {
 	}
 
 	@Override
+	//to print patient data
 	public void patientInformation() {
 		// TODO Auto-generated method stub
 		// String spaces=" ";
@@ -72,9 +77,9 @@ public class InformationDisplayImplementation implements InformationDisplay {
 	}
 
 	@Override
+	//to print doctors data
 	public void doctorInformation() {
 		// TODO Auto-generated method stub
-
 		System.out.println("Name     id  availability  specialization");
 		doctorlist.stream().forEach(i -> {
 			System.out.println(

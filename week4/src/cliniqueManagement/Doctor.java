@@ -1,5 +1,9 @@
 package cliniqueManagement;
-
+/**
+ * @author Sushant Patwari
+ * @since  10/02/2019
+ * @aim pojo class for Doctor
+ */
 public class Doctor {
 	private int id;
 	private String name;

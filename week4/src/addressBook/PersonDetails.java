@@ -1,5 +1,9 @@
 package addressBook;
-
+/**
+ * @author Sushant Patwari
+ * @since  10/02/2019
+ * @aim pojo class for PersonDetails
+ */
 public class PersonDetails {
 	private String firstName;
 	private String lastName;

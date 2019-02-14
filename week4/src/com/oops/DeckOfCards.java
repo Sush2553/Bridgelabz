@@ -1,5 +1,9 @@
 package com.oops;
-
+/**
+ * @author Sushant Patwari
+ * @since  10/02/2019
+ * @aim Runner class for deck of cards
+ */
 public class DeckOfCards {
 	public static void main(String[] args) {
 		String playercard[][] = DeckOfCardsImplementation.cardDistribute();

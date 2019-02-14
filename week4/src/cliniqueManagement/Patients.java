@@ -1,52 +1,62 @@
 package cliniqueManagement;
 
+/**
+ * @author Sushant Patwari
+ * @since 10/02/2019
+ * @aim pojo class for Patients
+ */
 public class Patients {
-	
+
 	String name;
 	int id;
 	String phone;
 	int age;
-	
-	public Patients()
-	{
-		
+
+	public Patients() {
+
 	}
-	
-	public Patients(int id,String name,String phone,int age)
-	{
-		this.id=id;
-		this.name=name;
-		this.phone=phone;
-		this.age=age;
+
+	public Patients(int id, String name, String phone, int age) {
+		this.id = id;
+		this.name = name;
+		this.phone = phone;
+		this.age = age;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getPhone() {
 		return phone;
 	}
+
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
 	public int getAge() {
 		return age;
 	}
+
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public String toString()
-	{
-		return (name+"   "+id+"    "+age+"   "+phone);
+
+	public String toString() {
+		return (name + "   " + id + "    " + age + "   " + phone);
 	}
-	
- }
+
+}

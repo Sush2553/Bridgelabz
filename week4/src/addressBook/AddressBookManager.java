@@ -1,5 +1,9 @@
 package addressBook;
-
+/**
+ * @author Sushant Patwari
+ * @since  10/02/2019
+ * @aim implementation of address book methods
+ */
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
@@ -10,6 +14,7 @@ import org.codehaus.jackson.type.TypeReference;
 import com.utility.Utility;
 
 interface manager {
+	// methods of addressbook
 	void save1(PersonDetails person, String addressBook) throws JsonMappingException, IOException;
 	void add() throws JsonMappingException, IOException;
 	void delete(String name, String addressBook) throws JsonMappingException, IOException;
@@ -19,7 +24,7 @@ interface manager {
 }
 
 class AddressBookManager implements manager {
-	static ObjectMapper mapper = new ObjectMapper();
+	static ObjectMapper mapper = new ObjectMapper(); //mapper to translate data
 	static String firstName;
 	static String lastName;
 	static String bookName;
@@ -78,12 +83,13 @@ class AddressBookManager implements manager {
 		int tempCount = 0;
 		String temp = "";
 		int stop = 0;
+		//read data from file and store it in linked list
 		LinkedList<PersonDetails> details = mapper.readValue(
 				new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/addressBook/" + addressBook),
 				new TypeReference<LinkedList<PersonDetails>>() {
 				});
 		for (PersonDetails person : details) {
-			if (person.getFirstName().equals(name)) {
+			if (person.getFirstName().equals(name)) { //check if entered name is present or not
 				tempCount = count;
 			}
 			count++;
@@ -95,16 +101,19 @@ class AddressBookManager implements manager {
 			count = Utility.getInt();
 			switch (count) {
 			case 1:
+				//change first name
 				System.out.println("Enter new first name :");
 				firstName = Utility.getString();
-				details.get(tempCount).setFirstName(name);
+				details.get(tempCount).setFirstName(name);  //set new name
 				break;
 			case 2:
+				//change last name
 				System.out.println("Enter new last name :");
 				lastName = Utility.getString();
-				details.get(tempCount).setLastName(lastName);
+				details.get(tempCount).setLastName(lastName); //set new last name
 				break;
 			case 3:
+				//edit address
 				System.out.println("press \n 1. for edit street");
 				System.out.println("2. for edit city");
 				System.out.println("3. for edit state");
@@ -114,31 +123,31 @@ class AddressBookManager implements manager {
 				if (choice == 1) {
 					System.out.println("Enter street:");
 					temp = Utility.getString();
-					details.get(tempCount).getAddress().setStreet(temp);
+					details.get(tempCount).getAddress().setStreet(temp); //change street name
 				}
 				if (choice == 2) {
 					System.out.println("Enter city:");
 					temp = Utility.getString();
-					details.get(tempCount).getAddress().setCity(temp);
+					details.get(tempCount).getAddress().setCity(temp); //change city name
 
 				}
 				if (choice == 3) {
 					System.out.println("Enter state:");
 					temp = Utility.getString();
-					details.get(tempCount).getAddress().setState(temp);
+					details.get(tempCount).getAddress().setState(temp); //change city name
 
 				}
 				if (choice == 4) {
 					System.out.println("Enter zip:");
 					int zip = Utility.getInt();
-					details.get(tempCount).getAddress().setZip(zip);
+					details.get(tempCount).getAddress().setZip(zip);//change zip
 					;
 
 				}
 				if (choice == 5) {
 					System.out.println("Enter mobile number:");
 					Long phoneNumber = Utility.getLong();
-					details.get(tempCount).getPhoneNumber().setMobileNumber(phoneNumber);
+					details.get(tempCount).getPhoneNumber().setMobileNumber(phoneNumber); //change mobile number
 
 				}
 			}
@@ -146,6 +155,7 @@ class AddressBookManager implements manager {
 			stop = Utility.getInt();
 		}
 		if (stop == 2) {
+			//write data to file
 			mapper.writeValue(
 					new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/addressBook/" + addressBook),
 					details);
@@ -189,7 +199,7 @@ class AddressBookManager implements manager {
 			}
 		}
 	}
-
+//to add new data
 	public void add() throws JsonMappingException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("Enter person first name:");
@@ -211,7 +221,7 @@ class AddressBookManager implements manager {
 		boolean result = true;
 		// to remove the given person
 		for (PersonDetails person : details) {
-			if (person.getFirstName().equals(name)) {
+			if (person.getFirstName().equals(name)) { //if name is present then delete
 				details.remove(count);
 				System.out.println("person successfully removed");
 				mapper.writeValue(
@@ -220,7 +230,7 @@ class AddressBookManager implements manager {
 			}
 			count++;
 		}
-		// to check whether the person is removed or not
+	// to check whether the person is removed or not
 		for (PersonDetails person : details) {
 			if (person.getFirstName().equals(name)) {
 				result = false;
@@ -231,6 +241,7 @@ class AddressBookManager implements manager {
 		}
 	}
 
+	//sort data by name
 	public void sortByName(String addressBook) throws JsonMappingException, IOException {
 
 		LinkedList<PersonDetails> details = mapper.readValue(
@@ -268,7 +279,7 @@ class AddressBookManager implements manager {
 
 		}
 	}
-
+//sort data by zip
 	public void sortByZip(String addressBook) throws JsonMappingException, IOException {
 		LinkedList<PersonDetails> details = mapper.readValue(
 				new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/addressBook/" + addressBook),

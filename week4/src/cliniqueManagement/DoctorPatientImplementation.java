@@ -1,5 +1,9 @@
 package cliniqueManagement;
-
+/**
+ * @author Sushant Patwari
+ * @since  10/02/2019
+ * @aim class to manipulate doctor and patient data
+ */
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,12 +14,13 @@ import org.codehaus.jackson.type.TypeReference;
 import com.utility.Utility;
 
 public class DoctorPatientImplementation implements DoctorAndPatientData {
-	static ObjectMapper mapper = new ObjectMapper();
-	List<Patients> personlist = new ArrayList<>();
-	List<Doctor> doctorlist = new ArrayList<>();
-	List<Appointment> appointmentlist = new ArrayList<>();
+	static ObjectMapper mapper = new ObjectMapper(); //create mapper 
+	List<Patients> personlist = new ArrayList<>(); //create arraylist to store patients details
+	List<Doctor> doctorlist = new ArrayList<>(); //create arraylist to store doctor details
+	List<Appointment> appointmentlist = new ArrayList<>(); //create arraylist to store appointment details
 	{
 		try {
+			//read files and store data into linked list
 			personlist = mapper.readValue(new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/cliniqueManagement/Patients.json"),
 					new TypeReference<List<Patients>>() {
 					});
@@ -58,23 +63,26 @@ public class DoctorPatientImplementation implements DoctorAndPatientData {
 			Answer = Utility.getInt();
 			switch (Answer) {
 			case 1:
+				//to add doctor
 				addDoctor();
+				//save data
 				save();
 				break;
 			case 2:
+				//delete doctor
 				deleteDoctor();
-				save();
+				save();//save data
 				break;
 			case 3:
-				addPatient();
+				addPatient(); //add patient
 				save();
 				break;
 			case 4:
-				deletePatient();
+				deletePatient(); //delete patient
 				save();
 				break;
 			case 5:
-				fixAppointment();
+				fixAppointment(); //fix appointment
 				save();
 				break;
 			case 6:

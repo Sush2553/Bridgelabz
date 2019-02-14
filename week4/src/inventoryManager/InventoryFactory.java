@@ -1,5 +1,9 @@
 package inventoryManager;
-
+/**
+ * @author Sushant Patwari
+ * @since  10/02/2019
+ * @aim pojo class for inventory
+ */
 public class InventoryFactory {
 	private int Id;
 	private String productname;
