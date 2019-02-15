@@ -9,14 +9,7 @@ public class InventoryFactory {
 	private int inventoryNumber;
 	private int inventoryValue;
    
-	public InventoryFactory(String inventoryname,int inventorynumber,int inventoryvalue)
-	 {
-		 this.inventoryName=inventoryname;
-		 this.inventoryNumber=inventorynumber;
-		 this.inventoryValue=inventoryvalue;
-	 }
-	 
-	 	public void setinventoryname(String inventoryname)
+	public void setinventoryname(String inventoryname)
 		{
 			this.inventoryName=inventoryname;
 		}

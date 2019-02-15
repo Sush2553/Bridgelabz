@@ -1,12 +1,12 @@
 package com.oops;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 /**
  * @author Sushant Patwari
  * @since  11/02/2019
  * @aim to implenment regular expression
  */
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class RegularExpression {
 	public static void regexExpression(String fullName, String mobile, String firstName) {
 		// your message to be displayed

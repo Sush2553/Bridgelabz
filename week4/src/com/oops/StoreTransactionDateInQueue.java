@@ -42,7 +42,7 @@ public class StoreTransactionDateInQueue {
 				companyName = data1.get(i).getCompanyName().trim();
 				symbol = data1.get(i).getSymbol().trim();
 				date = data1.get(i).getDate().trim();
-				queue.enque(companyName + " ", symbol + "   ","    "+ date); // add data to queue
+				queue.enque(companyName + " ", symbol + "   ", "    " + date); // add data to queue
 			}
 		}
 		System.out.println("  company\tsymbol\t  date & time of transaction\n");

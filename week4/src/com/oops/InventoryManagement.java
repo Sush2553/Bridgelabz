@@ -1,13 +1,13 @@
 package com.oops;
+import java.io.FileReader;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 /**
  * @author Sushant Patwari
  * @since  10/02/2019
  * @aim to display inventory data fron JSON file
  */
-import java.io.FileReader;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 
 public class InventoryManagement {
 
