@@ -332,13 +332,12 @@ class AddressBookManager implements manager {
 		File folder = new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/addressBook/");
 		return folder.listFiles();
 	}
-
+//print details
 	public static void openAddressbook(String addressbook) throws JsonMappingException, IOException {
 		LinkedList<PersonDetails> details = mapper.readValue(
 				new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/addressBook/" + addressbook),
 				new TypeReference<LinkedList<PersonDetails>>() {
 				});
-		System.out.println("" + addressbook);
 		System.out.println(details);
 
 	}

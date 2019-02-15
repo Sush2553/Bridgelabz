@@ -1,4 +1,5 @@
 package cliniqueManagement;
+
 /**
  * @author Sushant Patwari
  * @since  10/02/2019
@@ -13,13 +14,13 @@ import com.utility.Utility;
 
 public class InformationDisplayImplementation implements InformationDisplay {
 	static ObjectMapper mapper = new ObjectMapper();
-	List<Patients> personlist = new ArrayList<>(); //to store data in arraylist
+	List<Patients> personlist = new ArrayList<>(); // to store data in arraylist
 	List<Doctor> doctorlist = new ArrayList<>();
 	List<Appointment> appointmentlist = new ArrayList<>();
 
 	{
 		try {
-			//to read files
+			// to read files
 			personlist = mapper.readValue(
 					new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/cliniqueManagement/Patients.json"),
 					new TypeReference<List<Patients>>() {
@@ -43,29 +44,25 @@ public class InformationDisplayImplementation implements InformationDisplay {
 		do {
 			System.out.println("\n1. Print Doctors Information");
 			System.out.println("2. Print Patients Information");
-			System.out.println("3. Print Appointments Information");
-			System.out.println("4. Exit");
+			System.out.println("3. Exit");
 			Answer = Utility.getInt();
 			switch (Answer) {
 			case 1:
-				doctorInformation(); //print doctors data
+				doctorInformation(); // print doctors data
 				break;
 			case 2:
-				patientInformation(); //print patients data
+				patientInformation(); // print patients data
 				break;
 			case 3:
-				System.out.println("Exiting");
-				break;
-			case 4:
 				break;
 			default:
 				System.out.println("Invalid Entry");
 			}
-		} while (Answer != 4);
+		} while (Answer != 3);
 	}
 
 	@Override
-	//to print patient data
+	// to print patient data
 	public void patientInformation() {
 		// TODO Auto-generated method stub
 		// String spaces=" ";
@@ -77,7 +74,7 @@ public class InformationDisplayImplementation implements InformationDisplay {
 	}
 
 	@Override
-	//to print doctors data
+	// to print doctors data
 	public void doctorInformation() {
 		// TODO Auto-generated method stub
 		System.out.println("Name     id  availability  specialization");

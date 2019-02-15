@@ -1,5 +1,9 @@
 package commercialDataProcessing;
-
+/**
+* @author Sushant Patwari
+* @since 13/02/2019
+* @Aim Pojo class for commercial data processing
+*/
 public class ComPojo {
 	private String companyName;
 	private String symbol;

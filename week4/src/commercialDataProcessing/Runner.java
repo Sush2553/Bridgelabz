@@ -8,9 +8,13 @@ import java.util.LinkedList;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
-
 import com.utility.Utility;
 
+/**
+ * @author Sushant Patwari
+ * @since 13/02/2019
+ * @Aim To implement program for commercial data processing
+ */
 public class Runner {
 
 	static ObjectMapper mapper = new ObjectMapper();
@@ -42,7 +46,7 @@ public class Runner {
 				com.setCompanyName(name);
 				com.setSymbol(number);
 				com.setSymbolValue(price);
-				 // get current time
+				// get current time
 				String date = (dtf.format(now));
 				com.setDate(date);
 				// add new data

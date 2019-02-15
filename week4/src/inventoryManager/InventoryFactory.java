@@ -1,29 +1,14 @@
 package inventoryManager;
+
 /**
  * @author Sushant Patwari
- * @since  10/02/2019
+ * @since 10/02/2019
  * @aim pojo class for inventory
  */
 public class InventoryFactory {
-	private int Id;
 	private String productname;
 	private int totalStock;
 	private int stockValue;
-
-	public InventoryFactory(int Id,String productname, int totalStock, int stockValue) {
-		this.Id=Id;
-		this.productname = productname;
-		this.totalStock = totalStock;
-		this.stockValue = stockValue;
-	}
-
-	public int getId() {
-		return Id;
-	}
-
-	public void setId(int id) {
-		Id = id;
-	}
 
 	public void setproductname(String productname) {
 		this.productname = productname;
