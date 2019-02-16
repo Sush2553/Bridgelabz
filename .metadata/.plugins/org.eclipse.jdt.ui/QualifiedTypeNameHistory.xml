@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.PrintStream"/>
     <fullyQualifiedTypeName name="org.junit.Assert"/>
     <fullyQualifiedTypeName name="com.sun.jmx.mbeanserver.Util"/>
     <fullyQualifiedTypeName name="java.io.Console"/>
@@ -58,6 +57,7 @@
     <fullyQualifiedTypeName name="org.codehaus.jackson.JsonFactory"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="commercialDataProcessing.CommercialPojo"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="commercialDataProcessing.ComPojo"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="com.oops.InventoryFactory"/>
 </qualifiedTypeNameHistroy>
