@@ -59,6 +59,20 @@ package com.oops;
 		}
 		head = head.next;  //else shift head to next node
 		length--;
+		return "";
+		
+	}
+
+	public String dequeI()
+	{
+		Node temp=head;
+		if(length == 0)  //if queue is empty
+		{
+			System.out.println("No element present in List");
+			return " ";
+		}
+		head = head.next;  //else shift head to next node
+		length--;
 		return (String) temp.data;
 		
 	}

@@ -1,4 +1,4 @@
-package addressBook;
+ package addressBook;
 
 import java.io.File;
 import com.utility.Utility;
@@ -14,7 +14,6 @@ public class AddressBook {
 		String addressBookName = "";
 		String firstName;
 		String lastName;
-
 		AddressBookManager manager = new AddressBookManager(); // create object of addressbookManager class
 		int repeat = 1;
 
@@ -28,22 +27,14 @@ public class AddressBook {
 			case 1:
 				System.out.println("Enter address book name");
 				addressBookName = Utility.getString();
-				if (AddressBookManager.createAddressBook(addressBookName)) { // call method to create new addressbook
+				if (AddressBookManager.createAddressBook(addressBookName)) // call method to create new addressbook
 					System.out.println("new Address Book created");
-				} else {
+				else 
 					System.out.println("address book already created");
-				}
 				break;
 			// to add person in address book
 			case 2:
-				File file[] = manager.openFile(); // store file names from given location by calling openFile method
-				System.out.println("\ngot following json files at mentioned location...\nplz select proper one:");
-				for (File file1 : file) {
-					String name = file1.getName();
-					if (name.contains(".json")) //to print only json files
-						System.out.println(name); // display files at that location
-				}
-				System.out.println();
+				manager.printFileNames();
 				addressBookName = Utility.getString();
 				System.out.println("Enter person first name: ");
 				firstName = Utility.getString();
@@ -56,14 +47,7 @@ public class AddressBook {
 			// perform different operation on address book
 			case 3:
 				// manage
-				System.out.println("\ngot following json files at mentioned location...\nplz select proper one:");
-				File file1[] = manager.openFile();// store file names from given location by calling openFile method
-				for (File file2 : file1) {
-					String name = file2.getName();
-					if (name.contains(".json"))
-						System.out.println(file2.getName());
-				}
-				System.out.println();
+				manager.printFileNames();
 				addressBookName = Utility.getString();
 				boolean exist = new File(
 						"/home/admin1/Desktop/pre-felloship-programs/week4/src/addressBook/" + addressBookName)
@@ -84,9 +68,7 @@ public class AddressBook {
 					System.out.println("3. to sort person by name and zip");
 					System.out.println("4. to print person details");
 					System.out.println("5. exit");
-
 					choice = Utility.getInt(); // get users choice
-
 					switch (choice) {
 					case 1:
 						System.out.println("Enter person first name:");
@@ -116,7 +98,6 @@ public class AddressBook {
 						break;
 					case 5:
 						break;
-
 					default:
 						System.out.println("Invalid choice");
 						break;

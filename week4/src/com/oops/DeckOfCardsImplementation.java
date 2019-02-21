@@ -1,16 +1,20 @@
 package com.oops;
-/**
- * @author Sushant Patwari
- * @since  10/02/2019
- * @aim to implement deck of cards program
- */
+
 import java.util.Random;
 
+/**
+ * @author Sushant Patwari
+ * @since 10/02/2019
+ * @aim to implement deck of cards program
+ */
 public class DeckOfCardsImplementation {
+	@SuppressWarnings("rawtypes")
+	Queue1 queue = new Queue1();
+
 	public static String[][] cardDistribute() {
-		String arr[][] = new String[4][13]; //create string array of 4*13
-		cardInsert(arr); //call to cardInsert method
-		cardShuffle(arr);//call to cardShuffle method
+		String arr[][] = new String[4][13]; // create string array of 4*13
+		cardInsert(arr); // call to cardInsert method
+		cardShuffle(arr);// call to cardShuffle method
 
 		String playercard[][] = new String[4][9];
 		for (int i = 0; i < playercard.length; i++) {
@@ -20,6 +24,7 @@ public class DeckOfCardsImplementation {
 		}
 		return playercard;
 	}
+
 //get cards
 	public static void cardInsert(String arr[][]) {
 		String Suits[] = { "Clubs", "Diamonds", "Hearts", "Spades" };
@@ -27,10 +32,11 @@ public class DeckOfCardsImplementation {
 
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[i].length; j++) {
-				arr[i][j] = Suits[i] + " " + Rank[j]; //add rank with suit
+				arr[i][j] = Suits[i] + " " + Rank[j]; // add rank with suit
 			}
 		}
 	}
+
 //shuffle cards
 	public static void cardShuffle(String arr[][]) {
 		Random r1 = new Random();
@@ -44,11 +50,11 @@ public class DeckOfCardsImplementation {
 		}
 	}
 
-	//swap cards
+	// swap cards
 	public static void swap(String arr[][], int x1, int x2, int x3, int x4) {
 		String temp = arr[x1][x2];
 		arr[x1][x2] = arr[x3][x4];
 		arr[x3][x4] = temp;
 	}
 
-	}
+}

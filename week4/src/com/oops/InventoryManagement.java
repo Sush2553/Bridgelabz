@@ -39,7 +39,8 @@ public class InventoryManagement {
 		}
 
 	}
-
+	
+//main method
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		getData("Rice", "Ricename", "Weight", "Price");

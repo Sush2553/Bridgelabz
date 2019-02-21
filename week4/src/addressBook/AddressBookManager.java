@@ -1,9 +1,5 @@
 package addressBook;
-/**
- * @author Sushant Patwari
- * @since  10/02/2019
- * @aim implementation of address book methods
- */
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
@@ -12,17 +8,11 @@ import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 import com.utility.Utility;
-
-interface manager {
-	// methods of addressbook
-	void save1(PersonDetails person, String addressBook) throws JsonMappingException, IOException;
-	void add() throws JsonMappingException, IOException;
-	void delete(String name, String addressBook) throws JsonMappingException, IOException;
-	void sortByName(String bookName) throws JsonMappingException, IOException;
-	void sortByZip(String bookName) throws JsonMappingException, IOException;
-	void print(String bookName, String name) throws JsonMappingException, IOException;
-	
-}
+/**
+ * @author Sushant Patwari
+ * @since  10/02/2019
+ * @aim implementation of address book methods
+ */
 
 class AddressBookManager implements manager {
 	static ObjectMapper mapper = new ObjectMapper(); //mapper to translate data
@@ -200,7 +190,9 @@ class AddressBookManager implements manager {
 			}
 		}
 	}
-//to add new data
+
+	
+	//to add new data
 	public void add() throws JsonMappingException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("Enter person first name:");
@@ -333,6 +325,20 @@ class AddressBookManager implements manager {
 		File folder = new File("/home/admin1/Desktop/pre-felloship-programs/week4/src/addressBook/");
 		return folder.listFiles();
 	}
+	
+	//print all file names
+	public static void printFileNames()
+	{
+		File file[] = openFile(); // store file names from given location by calling openFile method
+		System.out.println("\ngot following json files at mentioned location...\nplz select proper one:");
+		for (File file1 : file) {
+			String name = file1.getName();
+			if (name.contains(".json")) //to print only json files
+				System.out.println(name); // display files at that location
+		}
+		System.out.println();
+	}
+	
 //print details
 	public static void openAddressbook(String addressbook) throws JsonMappingException, IOException {
 		LinkedList<PersonDetails> details = mapper.readValue(

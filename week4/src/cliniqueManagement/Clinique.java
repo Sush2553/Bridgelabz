@@ -1,14 +1,14 @@
 package cliniqueManagement;
+
+import java.text.ParseException;
+import java.util.Date;
+import com.utility.Utility;
 /**
  * @author Sushant Patwari
  * @since  10/02/2019
  * @aim runner class for clinique management
  */
 
-
-import java.text.ParseException;
-import java.util.Date;
-import com.utility.Utility;
 public class Clinique {
 static Date date;
 	

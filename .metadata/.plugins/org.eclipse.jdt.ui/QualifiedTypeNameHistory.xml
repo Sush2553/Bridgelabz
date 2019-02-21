@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.junit.Assert"/>
-    <fullyQualifiedTypeName name="com.sun.jmx.mbeanserver.Util"/>
-    <fullyQualifiedTypeName name="java.io.Console"/>
-    <fullyQualifiedTypeName name="sun.jvm.hotspot.utilities.IntArray"/>
-    <fullyQualifiedTypeName name="java.io.DataOutputStream"/>
     <fullyQualifiedTypeName name="java.io.DataInputStream"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.classfile.Node"/>
@@ -19,7 +14,6 @@
     <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
     <fullyQualifiedTypeName name="com.sun.tools.javac.code.Scope.WriteableScope"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.utility.week3.Utility"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
@@ -28,25 +22,19 @@
     <fullyQualifiedTypeName name="algorithm_programs.ElapsedTimeForMethods"/>
     <fullyQualifiedTypeName name="algorithm_programs.VendingMachine"/>
     <fullyQualifiedTypeName name="data_structure_programs.ImplementBankingCashCounter"/>
-    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="com.unoderedList.UnOrderList"/>
     <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="data_structure_programs.HashNode"/>
     <fullyQualifiedTypeName name="data_structure_programs.ImplementCalendar"/>
     <fullyQualifiedTypeName name="data_structure_programs.Queue"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="utility.Utility"/>
     <fullyQualifiedTypeName name="java.math.BigInteger"/>
     <fullyQualifiedTypeName name="com.utility.Utility"/>
     <fullyQualifiedTypeName name="jdk.internal.org.objectweb.asm.TypeReference"/>
     <fullyQualifiedTypeName name="org.codehaus.jackson.type.TypeReference"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.function.Predicate"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.functions.Function"/>
@@ -55,9 +43,21 @@
     <fullyQualifiedTypeName name="java.util.function.Function"/>
     <fullyQualifiedTypeName name="org.codehaus.jackson.JsonGenerator"/>
     <fullyQualifiedTypeName name="org.codehaus.jackson.JsonFactory"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="commercialDataProcessing.CommercialPojo"/>
     <fullyQualifiedTypeName name="commercialDataProcessing.ComPojo"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="com.oops.InventoryFactory"/>
+    <fullyQualifiedTypeName name="com.oops.DeckOfCardsImplementation"/>
+    <fullyQualifiedTypeName name="com.oops.Queue1"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
