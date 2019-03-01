@@ -1,0 +1,43 @@
+<web-app>
+  <servlet>  
+        <servlet-name>Login</servlet-name>  
+        <servlet-class>com.bridgelabz.LoginCheck</servlet-class>         
+      </servlet>  
+      
+      <servlet-mapping>  
+        <servlet-name>Login</servlet-name>  
+        <url-pattern>/servlet1</url-pattern>  
+      </servlet-mapping>  
+      
+       <filter>
+      	<filter-name>regFilter</filter-name>
+      	<filter-class>com.bridgelabz.LoginFilter</filter-class>          	
+      </filter>
+      <filter-mapping>
+      	<filter-name>regFilter</filter-name>
+      	<url-pattern>/servlet1</url-pattern>
+      </filter-mapping>
+      
+       <servlet>  
+        <servlet-name>Register</servlet-name>  
+        <servlet-class>com.bridgelabz.RegisterToLogin</servlet-class>         
+      </servlet>  
+      
+      <servlet-mapping>  
+        <servlet-name>Register</servlet-name>  
+        <url-pattern>/regLogin</url-pattern>  
+      </servlet-mapping>
+
+      <servlet>  
+        <servlet-name>logout</servlet-name>  
+        <servlet-class>com.bridgelabz.Logout</servlet-class>  
+      </servlet>  
+       <servlet-mapping>  
+        <servlet-name>logout</servlet-name>  
+        <url-pattern>/logout</url-pattern>  
+      </servlet-mapping> 
+   
+      <welcome-file-list>  
+       <welcome-file>index.jsp</welcome-file>  
+</welcome-file-list> 
+</web-app>
