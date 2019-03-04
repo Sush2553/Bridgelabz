@@ -24,9 +24,6 @@ public class RegisterToLogin extends HttpServlet {
 	 * This method fetch data entered by user on register.jsp page and save it into
 	 * database.this method create connection with database and perform operation on
 	 * it.
-	 * 
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
 	 */
 	int count = 0;
 	String query = "insert into WebApp.registerData(fName,lName,email,userName,password)values(?,?,?,?,?)";

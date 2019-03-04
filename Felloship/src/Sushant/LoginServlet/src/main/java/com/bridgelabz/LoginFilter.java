@@ -14,12 +14,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.Dao;
+/* This is filter class which is called before servlet 
+ * in this method user name and password is fetch entered by user on web page and 
+ * passed to dao class to check details in database  
+ */
 public class LoginFilter implements Filter
 {
-	/* This is filter class which is called before servlet 
-	 * in this method user name and password is fetch entered by user on web page and 
-	 * passed to dao class to check details in database  
-	 */
 	@SuppressWarnings("unused")
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException
@@ -45,9 +46,10 @@ public class LoginFilter implements Filter
 			else
 			{   
 				//if invalid data is entered user will remain on index page only
+				 out.print("invalid details"); 
 			    RequestDispatcher rd=request.getRequestDispatcher("/index.jsp");  
 			    rd.include(request, response);
-			    out.print("Authentication Error"); 			                  
+			   			                  
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

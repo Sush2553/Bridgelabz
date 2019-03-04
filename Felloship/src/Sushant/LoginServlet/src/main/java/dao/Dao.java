@@ -1,4 +1,4 @@
-package com.bridgelabz;
+package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -36,17 +36,28 @@ public class Dao {
 
 	public boolean checkDetails1(String name1, String lname1, String user1, String password1) throws SQLException, ClassNotFoundException {
 		// TODO Auto-generated method stub
-		String query="select * from WebApp.registerData where fname=?and  and lname=? and userName=?";
+		String query="select * from WebApp.registerData where fname=? and lname=? and userName=?";
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/?user=root/login","root","Sush@2553");
 		PreparedStatement statement = con.prepareStatement(query);
 		statement.setString(1,name1);
-		statement.setString(1,lname1);
-		statement.setString(2,password1);
+		statement.setString(2,lname1);
+		statement.setString(3,user1);
 		ResultSet set = statement.executeQuery();
 		//condition to check is that user name and password is available in database or not
 		if(set.next())
 		{
+		String query1="UPDATE WebApp.registerData SET password = ? where fname=? and lname=? and userName=?";
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/?user=root/login","root","Sush@2553");
+		PreparedStatement statement1 = con.prepareStatement(query1);
+		statement1.setString(1,password1);
+		statement1.setString(2,name1);
+		statement1.setString(3,lname1);
+		statement1.setString(4,user1);
+		statement1.executeUpdate();
+		System.out.println("password updated");
+		
 			return true;    //return true when entered details is correct
 		}
 		statement.close();

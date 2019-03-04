@@ -27,21 +27,21 @@
 				<td><h3 style="color: black; margin-left: 2em">Enter Email
 						ID</h3></td>
 				<td><input type="text" name="emailid"
-					style="width: 15em; height: 1.5em;"></td>
+					style="width: 15em; height: 1.5em;"required></td>
 			</tr>
 			<tr>
 				<td><h3 style="color: black; margin-left: 2em">Enter User
 						Name</h3></td>
 				<td><input type="text" name="uname"
-					style="width: 15em; height: 1.5em;"></td>
+					style="width: 15em; height: 1.5em;"required></td>
 			</tr>
 			<tr>
 				<td><h3 style="color: black; margin-left: 2em">Enter
 						Password</h3></td>
 				<td><input type="password" name="password"
 					pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,20})"
-					title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-					required style="width: 15em; height: 2em;"></td>
+					title="Must contain at least one number and one uppercase and lowercase letter and one special character, and at least 8 or more characters"
+					required style="width: 15em; height: 2em;"required></td>
 			</tr>
 			<tr>
 				<td></td>
