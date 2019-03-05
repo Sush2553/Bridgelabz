@@ -2493,3 +2493,57 @@ org.eclipse.core.runtime.CoreException: Variable references non-existent resourc
 2019-03-04 12:56:37,028 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2019-03-04 12:56:37,029 [Worker-88: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2019-03-04 12:56:37,029 [Worker-88: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/admin1/Desktop/Sushant/LoginServlet/src/test/resources
+2019-03-04 19:07:48,403 [Worker-159: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:07:48,404 [Worker-159: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-04 19:07:48,405 [Worker-159: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:07:48,405 [Worker-159: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/admin1/Desktop/Sushant/LoginServlet/src/test/resources
+2019-03-04 19:08:58,330 [Worker-162: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:08:58,331 [Worker-162: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-04 19:08:58,332 [Worker-162: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:08:58,333 [Worker-162: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/admin1/Desktop/Sushant/LoginServlet/src/test/resources
+2019-03-04 19:09:13,821 [Worker-162: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:09:13,821 [Worker-162: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-04 19:09:13,822 [Worker-162: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:09:13,822 [Worker-162: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/admin1/Desktop/Sushant/LoginServlet/src/test/resources
+2019-03-04 19:10:10,365 [Worker-163: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:10:10,366 [Worker-163: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-04 19:10:10,366 [Worker-163: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:10:10,366 [Worker-163: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/admin1/Desktop/Sushant/LoginServlet/src/test/resources
+2019-03-04 19:11:05,294 [Worker-163: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:11:05,295 [Worker-163: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-04 19:11:05,308 [Worker-163: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:11:05,308 [Worker-163: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/admin1/Desktop/Sushant/LoginServlet/src/test/resources
+2019-03-04 19:11:46,110 [Worker-163: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:11:46,111 [Worker-163: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-04 19:11:46,112 [Worker-163: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:11:46,112 [Worker-163: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/admin1/Desktop/Sushant/LoginServlet/src/test/resources
+2019-03-04 19:12:57,143 [Worker-162: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:12:57,144 [Worker-162: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-04 19:12:57,145 [Worker-162: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:12:57,145 [Worker-162: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/admin1/Desktop/Sushant/LoginServlet/src/test/resources
+2019-03-04 19:13:40,863 [Worker-160: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:13:40,864 [Worker-160: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-04 19:13:40,865 [Worker-160: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-04 19:13:40,865 [Worker-160: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/admin1/Desktop/Sushant/LoginServlet/src/test/resources
+2019-03-05 09:44:26,023 [Worker-8: Loading available Gradle versions] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-03-05 09:44:40,844 [Worker-6: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.plexus:plexus-utils:jar:1.5.1 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-03-05 09:44:41,235 [Worker-6: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.plexus:plexus-utils:jar:1.4.1 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-03-05 09:44:44,679 [Worker-6: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.plexus:plexus-utils:jar:1.5.5 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-03-05 09:44:44,931 [Worker-6: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.plexus:plexus-utils:jar:1.4.5 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-03-05 09:44:46,462 [Worker-6: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.bridgelabz:LoginServlet:0.0.1-SNAPSHOT @ /home/admin1/Desktop/Sushant/LoginServlet/pom.xml.
+2019-03-05 09:44:48,063 [Worker-6: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.plexus:plexus-utils:jar:1.4.1 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-03-05 09:44:48,402 [Worker-6: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.plexus:plexus-interpolation:jar:1.6 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-03-05 09:44:49,505 [Worker-12: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.plexus:plexus-utils:jar:1.4.1 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-03-05 09:44:49,701 [Worker-12: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.sonatype.plexus:plexus-build-api:jar:0.0.4 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2019-03-05 09:44:49,850 [Worker-12: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-05 09:44:49,856 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-05 09:44:49,858 [Worker-12: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-05 09:44:49,859 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/admin1/Desktop/Sushant/LoginServlet/src/test/resources
+2019-03-05 15:44:55,617 [Worker-68: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-05 15:44:55,633 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-05 15:44:55,634 [Worker-68: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-05 15:44:55,634 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/admin1/Desktop/Sushant/LoginServlet/src/test/resources
+2019-03-05 15:45:09,510 [Worker-68: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-05 15:45:09,511 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-05 15:45:09,512 [Worker-68: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-03-05 15:45:09,512 [Worker-68: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/admin1/Desktop/Sushant/LoginServlet/src/test/resources
