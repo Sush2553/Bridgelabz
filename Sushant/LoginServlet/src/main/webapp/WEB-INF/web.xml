@@ -1,0 +1,60 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+    id="WebApp_ID" version="3.1">
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>  
+        <servlet-name>Login</servlet-name>  
+        <servlet-class>com.bridgelabz.LoginCheck</servlet-class>         
+      </servlet>  
+      
+      <servlet-mapping>  
+        <servlet-name>Login</servlet-name>  
+        <url-pattern>/servlet1</url-pattern>  
+      </servlet-mapping>  
+        
+         
+       <filter>
+      	<filter-name>regFilter</filter-name>
+      	<filter-class>com.bridgelabz.LoginFilter</filter-class>          	
+      </filter>
+      
+      <filter-mapping>
+      	<filter-name>regFilter</filter-name>
+      	<url-pattern>/servlet1</url-pattern>
+      </filter-mapping>
+      
+      <servlet> 
+       <servlet-name>reset</servlet-name>  
+        <servlet-class>com.bridgelabz.ResetPassword</servlet-class>         
+      </servlet>  
+      
+      <servlet-mapping>  
+        <servlet-name>reset</servlet-name>  
+        <url-pattern>/servlet2</url-pattern>  
+      </servlet-mapping>  
+      
+       <servlet>  
+        <servlet-name>Register</servlet-name>  
+        <servlet-class>com.bridgelabz.RegisterToLogin</servlet-class>         
+      </servlet>  
+      
+      
+      <servlet-mapping>  
+        <servlet-name>Register</servlet-name>  
+        <url-pattern>/regLogin</url-pattern>  
+      </servlet-mapping>
+
+      <servlet>  
+        <servlet-name>logout</servlet-name>  
+        <servlet-class>com.bridgelabz.Logout</servlet-class>  
+      </servlet>  
+       <servlet-mapping>  
+        <servlet-name>logout</servlet-name>  
+        <url-pattern>/logout</url-pattern>  
+      </servlet-mapping> 
+   
+      <welcome-file-list>  
+       <welcome-file>index.jsp</welcome-file>  
+</welcome-file-list> 
+</web-app>
