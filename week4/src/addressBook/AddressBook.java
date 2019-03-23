@@ -13,7 +13,7 @@ public class AddressBook {
 		AddressBookManager manager = new AddressBookManager(); // create object of addressbookManager class
 		int repeat = 1;
 		while (repeat == 1) {
-			System.out.println("1. create new address book\n2. add person in existing address book\n2. add person in existing address book");
+			System.out.println("1. create new address book\n2. add person in existing address book\n3. Print");
 			int choice = Utility.getInt(); // get user's choice
 			switch (choice) {
 			// to create address book

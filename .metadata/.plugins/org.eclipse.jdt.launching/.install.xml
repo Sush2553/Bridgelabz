@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
-    <entry loc="/usr/lib/jvm/java-11-openjdk-amd64" stamp="1548906298877"/>
+<entry loc="/home/admin1/Downloads/jdk1.8.0_201/jre" stamp="1544903126000"/>
+<entry loc="/usr/lib/jvm/java-11-openjdk-amd64" stamp="1548906298000"/>
 </dirs>
